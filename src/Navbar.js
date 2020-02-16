@@ -12,6 +12,8 @@ const Navbar = styled.ul`
   font-size: 18px;
   color: var(--color-text);
 
+  // border: 1px solid red;
+
   & > li {
     height: 100%;
   }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import Div100vh from "react-div-100vh";
 
 import SEO from "./SEO";
 import Defaults from "./Defaults";
@@ -15,8 +16,10 @@ function App() {
       <SEO />
       <Defaults />
       <Cursor mining={mining} />
-      <Navbar setMining={setMining} />
-      <Main setMining={setMining} />
+      <Div100vh>
+        <Navbar setMining={setMining} />
+        <Main setMining={setMining} />
+      </Div100vh>
     </Router>
   );
 }

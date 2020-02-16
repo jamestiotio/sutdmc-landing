@@ -7,7 +7,7 @@ import Content from "./Content";
 const Main = styled.main`
   width: 100vw;
   max-width: 1680px;
-  height: calc(100vh - 60px);
+  height: calc(100% - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
