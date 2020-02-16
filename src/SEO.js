@@ -11,8 +11,7 @@ const SEO = () => {
       : "SUTD Minecraft",
     description = `A blocky and virtual rendition of SUTD in our very own student-hosted Minecraft server!`,
     image =
-      "https://sutdmc.opensutd.org/" +
-      require("./assets/images/site-image.png"),
+      "https://sutdmc.opensutd.org" + require("./assets/images/site-image.png"),
     sitename = "SUTD Minecraft",
     url = location
       ? `https://sutdmc.opensutd.org/${location}/`
