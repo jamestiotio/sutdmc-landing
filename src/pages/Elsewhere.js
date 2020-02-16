@@ -3,7 +3,6 @@ import React from "react";
 import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";
 import SubHeader from "../components/SubHeader";
-import Text from "../components/Text";
 import TextAnchor from "../components/TextAnchor";
 
 const ElsewhereComp = () => {
@@ -12,8 +11,8 @@ const ElsewhereComp = () => {
       <PageHeader>Other Places to Visit</PageHeader>
 
       <SubHeader>Official Links</SubHeader>
-      <div>
-        <Text>
+      <ul>
+        <li>
           <TextAnchor
             href="https://openhouse.sutd.edu.sg/"
             target="_blank"
@@ -21,8 +20,8 @@ const ElsewhereComp = () => {
           >
             SUTD Open House 2020
           </TextAnchor>
-        </Text>
-        <Text>
+        </li>
+        <li>
           <TextAnchor
             href="https://sutd.edu.sg/"
             target="_blank"
@@ -30,12 +29,12 @@ const ElsewhereComp = () => {
           >
             SUTD Website
           </TextAnchor>
-        </Text>
-      </div>
+        </li>
+      </ul>
 
       <SubHeader>OpenSUTD</SubHeader>
-      <div>
-        <Text>
+      <ul>
+        <li>
           <TextAnchor
             href="https://openhouse.opensutd.org/"
             target="_blank"
@@ -43,8 +42,8 @@ const ElsewhereComp = () => {
           >
             OpenSUTD Open House 2020
           </TextAnchor>
-        </Text>
-        <Text>
+        </li>
+        <li>
           <TextAnchor
             href="https://virtual.opensutd.org/"
             target="_blank"
@@ -52,8 +51,8 @@ const ElsewhereComp = () => {
           >
             SUTD Virtual Tour
           </TextAnchor>
-        </Text>
-        <Text>
+        </li>
+        <li>
           <TextAnchor
             href="https://opensutd.org/"
             target="_blank"
@@ -61,12 +60,12 @@ const ElsewhereComp = () => {
           >
             OpenSUTD Website
           </TextAnchor>
-        </Text>
-      </div>
+        </li>
+      </ul>
 
       <SubHeader>Source Code</SubHeader>
-      <div>
-        <Text>
+      <ul>
+        <li>
           <TextAnchor
             href="https://github.com/"
             target="_blank"
@@ -74,8 +73,8 @@ const ElsewhereComp = () => {
           >
             Server Source
           </TextAnchor>
-        </Text>
-        <Text>
+        </li>
+        <li>
           <TextAnchor
             href="https://github.com/OpenSUTD/sutdmc-landing"
             target="_blank"
@@ -83,8 +82,8 @@ const ElsewhereComp = () => {
           >
             Website Source
           </TextAnchor>
-        </Text>
-      </div>
+        </li>
+      </ul>
     </PageBase>
   );
 };

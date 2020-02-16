@@ -10,10 +10,10 @@ const HomeComp = () => {
     <PageBase>
       <PageHeader>Welcome!</PageHeader>
       <Text>
-        Take a tour of SUTD's very own student-hosted Minecraft server -
-        'spleef' with your friends at the campus center, admire the Jackie Chan
-        pavilion in all its 8-bit glory or simply chill at your virtual hostel
-        room!
+        Take a tour of a blocky and virtual rendition of SUTD in our very own
+        student-hosted Minecraft server - 'spleef' with your friends at the
+        campus center, admire the Jackie Chan pavilion in all its 8-bit glory or
+        simply chill at your virtual hostel room!
       </Text>
       <CTA href="http://159.65.131.201:25570/">Enter</CTA>
     </PageBase>
