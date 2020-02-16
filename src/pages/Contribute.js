@@ -1,11 +1,11 @@
 import React from "react";
 
-import PageBase from "./components/PageBase";
-import PageHeader from "./components/PageHeader";
-import Text from "./components/Text";
-import CTA from "./components/CTA";
+import PageBase from "../components/PageBase";
+import PageHeader from "../components/PageHeader";
+import Text from "../components/Text";
+import CTA from "../components/CTA";
 
-const ContributePageComp = ({ setMining }) => {
+const ContributeComp = ({ setMining }) => {
   return (
     <PageBase>
       <PageHeader>Recruiting Builders & Surveryors!</PageHeader>
@@ -26,4 +26,4 @@ const ContributePageComp = ({ setMining }) => {
   );
 };
 
-export default ContributePageComp;
+export default ContributeComp;

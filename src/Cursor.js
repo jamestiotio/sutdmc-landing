@@ -23,6 +23,10 @@ const Cursor = styled.img`
   z-index: 999;
   pointer-events: none;
 
+  @media (max-width: 896px) {
+    display: none;
+  }
+
   ${props => (props.mining ? MineMixin : null)}
 `;
 

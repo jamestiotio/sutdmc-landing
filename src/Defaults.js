@@ -52,6 +52,18 @@ const Defaults = createGlobalStyle`
       text-decoration: none;
       cursor: none;
     }
+
+    @media (max-width: 896px) {
+      body {
+        cursor: auto;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
 `;
 
 export default Defaults;

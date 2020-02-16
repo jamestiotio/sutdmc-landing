@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import HeroImage from "./HeroImage";
-import HeroContent from "./HeroContent";
+import Content from "./Content";
 
-const Hero = styled.section`
+const Main = styled.main`
   width: 100vw;
   max-width: 1680px;
   height: calc(100vh - 60px);
@@ -12,20 +12,15 @@ const Hero = styled.section`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-
   padding: 0 10%;
-
-  // border: 1px solid red;
 
   @media (max-width: 1200px) {
     padding: 0 7.5%;
-    // border: 1px solid red;
   }
 
   @media (max-width: 896px) {
     padding: 20px 15%;
     flex-direction: column;
-    // border: 1px solid blue;
   }
 
   @media (max-width: 414px) {
@@ -33,13 +28,13 @@ const Hero = styled.section`
   }
 `;
 
-const HeroComp = ({ setMining }) => {
+const MainComp = ({ setMining }) => {
   return (
-    <Hero>
+    <Main>
       <HeroImage />
-      <HeroContent setMining={setMining} />
-    </Hero>
+      <Content setMining={setMining} />
+    </Main>
   );
 };
 
-export default HeroComp;
+export default MainComp;

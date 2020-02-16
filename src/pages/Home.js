@@ -1,12 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 
-import PageBase from "./components/PageBase";
-import PageHeader from "./components/PageHeader";
-import Text from "./components/Text";
-import CTA from "./components/CTA";
+import PageBase from "../components/PageBase";
+import PageHeader from "../components/PageHeader";
+import Text from "../components/Text";
+import CTA from "../components/CTA";
 
-const MainPageComp = ({ setMining }) => {
+const HomeComp = ({ setMining }) => {
   return (
     <PageBase>
       <PageHeader>Welcome!</PageHeader>
@@ -27,4 +26,4 @@ const MainPageComp = ({ setMining }) => {
   );
 };
 
-export default MainPageComp;
+export default HomeComp;

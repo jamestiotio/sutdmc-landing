@@ -2,17 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Switch, Route } from "react-router-dom";
 
-import MainPage from "./MainPage";
-import ContributePage from "./ContributePage";
-import ChangelogPage from "./ChangelogPage";
-import ElsewherePage from "./ElsewherePage";
+import Home from "./pages/Home";
+import Contribute from "./pages/Contribute";
+import Changelog from "./pages/Changelog";
+import Elsewhere from "./pages/Elsewhere";
 
-const HeroContent = styled.div`
+const Content = styled.div`
   height: 70%;
   overflow-y: scroll;
   margin-left: 150px;
-
-  // border: 1px solid blue;
 
   @media (max-width: 1200px) {
     margin-left: 100px;
@@ -26,25 +24,25 @@ const HeroContent = styled.div`
   }
 `;
 
-const HeroContentComp = ({ setMining }) => {
+const ContentComp = ({ setMining }) => {
   return (
-    <HeroContent>
+    <Content>
       <Switch>
         <Route exact path="/">
-          <MainPage setMining={setMining} />
+          <Home setMining={setMining} />
         </Route>
         <Route exact path="/contribute">
-          <ContributePage setMining={setMining} />
+          <Contribute setMining={setMining} />
         </Route>
         <Route exact path="/changelog">
-          <ChangelogPage />
+          <Changelog />
         </Route>
         <Route exact path="/elsewhere">
-          <ElsewherePage setMining={setMining} />
+          <Elsewhere setMining={setMining} />
         </Route>
       </Switch>
-    </HeroContent>
+    </Content>
   );
 };
 
-export default HeroContentComp;
+export default ContentComp;

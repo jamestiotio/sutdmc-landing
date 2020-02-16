@@ -59,7 +59,7 @@ function NavbarComp({ setMining }) {
             onMouseEnter={() => setMining(true)}
             onMouseLeave={() => setMining(false)}
           >
-            Main
+            Home
           </StyledLink>
         </li>
         <li>

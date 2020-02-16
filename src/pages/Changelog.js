@@ -1,11 +1,11 @@
 import React from "react";
 
-import PageBase from "./components/PageBase";
-import PageHeader from "./components/PageHeader";
-import SubHeader from "./components/SubHeader";
-import Text from "./components/Text";
+import PageBase from "../components/PageBase";
+import PageHeader from "../components/PageHeader";
+import SubHeader from "../components/SubHeader";
+import Text from "../components/Text";
 
-const ChangelogPageComp = () => {
+const ChangelogComp = () => {
   return (
     <PageBase>
       <PageHeader>Server Changes</PageHeader>
@@ -178,4 +178,4 @@ const ChangelogPageComp = () => {
   );
 };
 
-export default ChangelogPageComp;
+export default ChangelogComp;

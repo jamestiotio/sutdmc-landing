@@ -1,11 +1,11 @@
 import React from "react";
 
-import PageBase from "./components/PageBase";
-import PageHeader from "./components/PageHeader";
-import SubHeader from "./components/SubHeader";
-import Text from "./components/Text";
+import PageBase from "../components/PageBase";
+import PageHeader from "../components/PageHeader";
+import SubHeader from "../components/SubHeader";
+import Text from "../components/Text";
 
-const ElsewherePageComp = ({ setMining }) => {
+const ElsewhereComp = ({ setMining }) => {
   return (
     <PageBase>
       <PageHeader>Other Places to Visit</PageHeader>
@@ -102,4 +102,4 @@ const ElsewherePageComp = ({ setMining }) => {
   );
 };
 
-export default ElsewherePageComp;
+export default ElsewhereComp;
