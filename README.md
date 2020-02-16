@@ -1,4 +1,9 @@
-Landing page for [SUTD Minecraft](http://sutdmc.opensutd.org), a blocky and virtual rendition of SUTD in our very own student-hosted Minecraft server!
+Landing page for [SUTD Minecraft](https://sutdmc.opensutd.org), a blocky and virtual rendition of SUTD in our very own student-hosted Minecraft server!
+
+## Instructions
+
+1. `npm install` to download required modules
+2. Run available scripts as listed below
 
 ## Available Scripts
 

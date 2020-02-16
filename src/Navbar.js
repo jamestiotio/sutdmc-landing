@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
+import Link from "./components/Link";
+
+const NavLink = styled(Link)`
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
 
 const Navbar = styled.ul`
   width: 100vw;
@@ -43,51 +50,21 @@ const Navbar = styled.ul`
   }
 `;
 
-const StyledLink = styled(Link)`
-  height: 100%;
-  display: flex;
-  align-items: center;
-`;
-
-function NavbarComp({ setMining }) {
+function NavbarComp() {
   return (
     <nav>
       <Navbar>
         <li>
-          <StyledLink
-            to="/"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
-          >
-            Home
-          </StyledLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <StyledLink
-            to="/contribute"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
-          >
-            Contribute
-          </StyledLink>
+          <NavLink to="/contribute">Contribute</NavLink>
         </li>
         <li>
-          <StyledLink
-            to="/changelog"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
-          >
-            Changelog
-          </StyledLink>
+          <NavLink to="/changelog">Changelog</NavLink>
         </li>
         <li>
-          <StyledLink
-            to="/elsewhere"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
-          >
-            Elsewhere
-          </StyledLink>
+          <NavLink to="/elsewhere">Elsewhere</NavLink>
         </li>
       </Navbar>
     </nav>

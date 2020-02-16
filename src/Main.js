@@ -28,11 +28,11 @@ const Main = styled.main`
   }
 `;
 
-const MainComp = ({ setMining }) => {
+const MainComp = () => {
   return (
     <Main>
       <HeroImage />
-      <Content setMining={setMining} />
+      <Content />
     </Main>
   );
 };

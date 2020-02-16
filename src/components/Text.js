@@ -7,15 +7,6 @@ const Text = styled.p`
   line-height: 1.4;
   color: var(--color-text);
 
-  & > a {
-    color: var(--color-accent);
-    text-decoration: underline;
-
-    &:hover {
-      color: var(--color-accent-light);
-    }
-  }
-
   & > span.colored {
     color: var(--color-accent);
   }

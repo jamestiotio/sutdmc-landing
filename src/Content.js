@@ -24,21 +24,21 @@ const Content = styled.div`
   }
 `;
 
-const ContentComp = ({ setMining }) => {
+const ContentComp = () => {
   return (
     <Content>
       <Switch>
         <Route exact path="/">
-          <Home setMining={setMining} />
+          <Home />
         </Route>
         <Route exact path="/contribute">
-          <Contribute setMining={setMining} />
+          <Contribute />
         </Route>
         <Route exact path="/changelog">
           <Changelog />
         </Route>
         <Route exact path="/elsewhere">
-          <Elsewhere setMining={setMining} />
+          <Elsewhere />
         </Route>
       </Switch>
     </Content>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Div100vh from "react-div-100vh";
 
+import { MiningContext } from "./Context";
+
 import SEO from "./SEO";
 import Defaults from "./Defaults";
 import Cursor from "./Cursor";
@@ -16,10 +18,12 @@ function App() {
       <SEO />
       <Defaults />
       <Cursor mining={mining} />
-      <Div100vh>
-        <Navbar setMining={setMining} />
-        <Main setMining={setMining} />
-      </Div100vh>
+      <MiningContext.Provider value={setMining}>
+        <Div100vh>
+          <Navbar />
+          <Main />
+        </Div100vh>
+      </MiningContext.Provider>
     </Router>
   );
 }

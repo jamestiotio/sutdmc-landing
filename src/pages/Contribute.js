@@ -5,7 +5,7 @@ import PageHeader from "../components/PageHeader";
 import Text from "../components/Text";
 import CTA from "../components/CTA";
 
-const ContributeComp = ({ setMining }) => {
+const ContributeComp = () => {
   return (
     <PageBase>
       <PageHeader>Recruiting Builders & Surveryors!</PageHeader>
@@ -17,8 +17,6 @@ const ContributeComp = ({ setMining }) => {
         href="https://t.me/joinchat/D_qXhUkqWq4sSROb6ZeZ6Q"
         target="_blank"
         rel="noopener noreferrer"
-        onMouseEnter={() => setMining(true)}
-        onMouseLeave={() => setMining(false)}
       >
         Telegram Link
       </CTA>

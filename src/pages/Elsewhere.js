@@ -4,8 +4,9 @@ import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";
 import SubHeader from "../components/SubHeader";
 import Text from "../components/Text";
+import TextAnchor from "../components/TextAnchor";
 
-const ElsewhereComp = ({ setMining }) => {
+const ElsewhereComp = () => {
   return (
     <PageBase>
       <PageHeader>Other Places to Visit</PageHeader>
@@ -13,89 +14,75 @@ const ElsewhereComp = ({ setMining }) => {
       <SubHeader>Official Links</SubHeader>
       <div>
         <Text>
-          <a
+          <TextAnchor
             href="https://openhouse.sutd.edu.sg/"
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
           >
             SUTD Open House 2020
-          </a>
+          </TextAnchor>
         </Text>
         <Text>
-          <a
+          <TextAnchor
             href="https://sutd.edu.sg/"
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
           >
             SUTD Website
-          </a>
+          </TextAnchor>
         </Text>
       </div>
 
       <SubHeader>OpenSUTD</SubHeader>
       <div>
         <Text>
-          <a
+          <TextAnchor
             href="https://openhouse.opensutd.org/"
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
           >
             OpenSUTD Open House 2020
-          </a>
+          </TextAnchor>
         </Text>
         <Text>
-          <a
+          <TextAnchor
             href="https://virtual.opensutd.org/"
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
           >
             SUTD Virtual Tour
-          </a>
+          </TextAnchor>
         </Text>
         <Text>
-          <a
+          <TextAnchor
             href="https://opensutd.org/"
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
           >
             OpenSUTD Website
-          </a>
+          </TextAnchor>
         </Text>
       </div>
 
       <SubHeader>Source Code</SubHeader>
       <div>
         <Text>
-          <a
+          <TextAnchor
             href="https://github.com/"
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
           >
             Server Source
-          </a>
+          </TextAnchor>
         </Text>
         <Text>
-          <a
-            href="https://github.com/"
+          <TextAnchor
+            href="https://github.com/OpenSUTD/sutdmc-landing"
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => setMining(true)}
-            onMouseLeave={() => setMining(false)}
           >
             Website Source
-          </a>
+          </TextAnchor>
         </Text>
       </div>
     </PageBase>

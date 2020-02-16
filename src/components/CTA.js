@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+
+import { MiningContext } from "../Context";
 
 const CTA = styled.a`
   text-align: center;
@@ -28,8 +30,15 @@ const CTA = styled.a`
 `;
 
 const CTAComp = ({ href, children, ...others }) => {
+  const setMining = useContext(MiningContext);
+
   return (
-    <CTA href={href} {...others}>
+    <CTA
+      href={href}
+      {...others}
+      onMouseEnter={() => setMining(true)}
+      onMouseLeave={() => setMining(false)}
+    >
       {children}
     </CTA>
   );
