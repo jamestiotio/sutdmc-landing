@@ -25,8 +25,8 @@ const HeroImage = styled.div`
   }
 
   @media (max-width: 414px) {
-    width: calc(20vh * 0.8);
-    height: 20vh;
+    width: calc(25vh * 0.8);
+    height: 25vh;
   }
 `;
 
@@ -59,6 +59,7 @@ function HeroImageComp() {
 
   useEffect(() => {
     const ctx = canvasRef.current.getContext("2d");
+    ctx.msImageSmoothingEnabled = false;
     ctx.mozImageSmoothingEnabled = false;
     ctx.webkitImageSmoothingEnabled = false;
     ctx.imageSmoothingEnabled = false;
@@ -82,25 +83,13 @@ function HeroImageComp() {
     }
 
     requestAnimationFrame(() => {
-      // pixelate(canvas, image, 3);
-      // setTimeout(() => pixelate(canvas, image, 4), 100);
-      // setTimeout(() => pixelate(canvas, image, 5), 200);
-      // setTimeout(() => pixelate(canvas, image, 6), 300);
-      // setTimeout(() => pixelate(canvas, image, 7), 400);
-      // setTimeout(() => pixelate(canvas, image, 8), 500);
-      // setTimeout(() => pixelate(canvas, image, 9), 600);
-      // setTimeout(() => pixelate(canvas, image, 10), 700);
-      // setTimeout(() => pixelate(canvas, image, 100), 800);
-
       pixelate(canvas, image, 3);
       setTimeout(() => pixelate(canvas, image, 4), 100);
       setTimeout(() => pixelate(canvas, image, 5), 200);
       setTimeout(() => pixelate(canvas, image, 6), 300);
       setTimeout(() => pixelate(canvas, image, 7), 400);
       setTimeout(() => pixelate(canvas, image, 8), 500);
-      // setTimeout(() => pixelate(canvas, image, 9), 600);
-      setTimeout(() => pixelate(canvas, image, 10), 600);
-      setTimeout(() => pixelate(canvas, image, 50), 700);
+      setTimeout(() => pixelate(canvas, image, 100), 600);
     });
   }, [location]);
 
