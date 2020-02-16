@@ -10,9 +10,7 @@ const Navbar = styled.ul`
   align-items: center;
   font-family: var(--font-primary);
   font-size: 18px;
-  color: white;
-
-  // border: 1px solid red;
+  color: var(--color-text);
 
   & > li {
     height: 100%;
@@ -27,7 +25,21 @@ const Navbar = styled.ul`
   }
 
   & > li > a:hover {
-    color: #ffd866;
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 896px) {
+    font-size: 16px;
+    justify-content: space-evenly;
+
+    & > li:first-child {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 414px) {
+    font-size: 12px;
+    padding: 0 20px;
   }
 `;
 

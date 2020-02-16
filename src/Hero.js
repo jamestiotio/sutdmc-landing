@@ -6,13 +6,30 @@ import HeroContent from "./HeroContent";
 
 const Hero = styled.section`
   width: 100vw;
+  max-width: 1680px;
   height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+
+  padding: 0 10%;
+
+  // border: 1px solid red;
 
   @media (max-width: 1200px) {
-    border: 1px solid red;
+    padding: 0 7.5%;
+    // border: 1px solid red;
+  }
+
+  @media (max-width: 896px) {
+    padding: 20px 15%;
+    flex-direction: column;
+    // border: 1px solid blue;
+  }
+
+  @media (max-width: 414px) {
+    padding: 0 20px;
   }
 `;
 

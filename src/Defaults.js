@@ -10,22 +10,11 @@ const Defaults = createGlobalStyle`
     :root {
       --font-primary: "PX437";
 
-    //   --color-background: #101223;
-    //   --color-background: #000000;
       --color-background: #2d2a2e;
-      --color-element-dark: #181a34;
-      --color-element-light: #202346;
-      --color-navbar: #181a34;
-      --color-text: #b9bcdf;
-      --color-navbar-text: #b9bcdf;
-      --color-accent-main: #858ac7;
-      --color-shimmer-bg: #303569;
-      --color-shimmer-shine: #40478c;
-      --color-accent-pending: #f7bb18;
-      --color-accent-processed: #bf18f7;
-      --color-accent-collected: #40b11b;
-      --color-accent-stock: #184ff7;
-      --color-warning: #b11b1b;
+      --color-text: #ffffff;
+      --color-accent: #ffbf00;
+      --color-accent-light: #ffd866;
+      --color-grey: #4e4950;
     }
 
     * {

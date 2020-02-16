@@ -4,12 +4,35 @@ import { useLocation } from "react-router-dom";
 
 const HeroImage = styled.div`
   position: relative;
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 
-  // border: 1px solid red;
+  // border: 1px solid green;
+
+  width: 450px;
+  height: 550px;
+
+  @media (max-width: 1200px) {
+    width: 350px;
+    height: 450px;
+  }
+
+  @media (max-width: 896px) {
+    width: calc(30vh * 0.8);
+    height: 30vh;
+  }
+
+  @media (max-width: 414px) {
+    width: calc(20vh * 0.8);
+    height: 20vh;
+  }
+`;
+
+const StyledCanvas = styled.canvas`
+  width: 100%;
+  height: 100%;
 `;
 
 function HeroImageComp() {
@@ -59,21 +82,36 @@ function HeroImageComp() {
     }
 
     requestAnimationFrame(() => {
+      // pixelate(canvas, image, 3);
+      // setTimeout(() => pixelate(canvas, image, 4), 100);
+      // setTimeout(() => pixelate(canvas, image, 5), 200);
+      // setTimeout(() => pixelate(canvas, image, 6), 300);
+      // setTimeout(() => pixelate(canvas, image, 7), 400);
+      // setTimeout(() => pixelate(canvas, image, 8), 500);
+      // setTimeout(() => pixelate(canvas, image, 9), 600);
+      // setTimeout(() => pixelate(canvas, image, 10), 700);
+      // setTimeout(() => pixelate(canvas, image, 100), 800);
+
       pixelate(canvas, image, 3);
       setTimeout(() => pixelate(canvas, image, 4), 100);
       setTimeout(() => pixelate(canvas, image, 5), 200);
       setTimeout(() => pixelate(canvas, image, 6), 300);
       setTimeout(() => pixelate(canvas, image, 7), 400);
       setTimeout(() => pixelate(canvas, image, 8), 500);
-      setTimeout(() => pixelate(canvas, image, 9), 600);
-      setTimeout(() => pixelate(canvas, image, 10), 700);
-      setTimeout(() => pixelate(canvas, image, 100), 800);
+      // setTimeout(() => pixelate(canvas, image, 9), 600);
+      setTimeout(() => pixelate(canvas, image, 10), 600);
+      setTimeout(() => pixelate(canvas, image, 50), 700);
     });
   }, [location]);
 
   return (
     <HeroImage>
-      <canvas id="canvas" width="500" height="580" ref={canvasRef}></canvas>
+      <StyledCanvas
+        id="canvas"
+        width="450"
+        height="550"
+        ref={canvasRef}
+      ></StyledCanvas>
       <img
         src={require("./assets/images/block-main.png")}
         alt="pic"

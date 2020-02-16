@@ -3,14 +3,13 @@ import styled from "styled-components";
 
 const CTA = styled.a`
   text-align: center;
-  //   background: #ffd866;
-  background: #ffbf00;
+  background: var(--color-accent);
   border-bottom: 6px inset rgba(0, 0, 0, 0.5);
   border-left: 6px inset rgba(0, 0, 0, 0.5);
   border-right: 6px inset rgba(255, 255, 255, 0.5);
   border-top: 6px inset rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
-  color: #666666;
+  color: var(--color-grey);
   display: inline-block;
   font-family: var(--font-primary);
   font-size: 24px;
@@ -24,8 +23,7 @@ const CTA = styled.a`
 
   &:focus,
   &:hover {
-    // background: #ffe699;
-    background: #ffd866;
+    background: var(--color-accent-light);
   }
 `;
 

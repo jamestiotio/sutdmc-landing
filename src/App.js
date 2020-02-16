@@ -1,58 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import styled from "styled-components";
-
-import PageHeader from "./components/PageHeader";
-import Text from "./components/Text";
 
 import Defaults from "./Defaults";
 import Cursor from "./Cursor";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 
-const Temp = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20%;
-  cursor: auto;
-
-  & > * + * {
-    margin-top: 20px;
-  }
-`;
-
 function App() {
   const [mining, setMining] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  // const [canvasDims, setCanvasDims] = useState(
+  //   window.matchMedia("(max-width: 896px)").matches
+  //     ? [250, 350]
+  //     : window.matchMedia("(max-width: 1200px)").matches
+  //     ? [350, 450]
+  //     : [450, 550]
+  // );
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWindowSize(window.innerWidth);
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => {
+  //     if (window.matchMedia("(max-width: 896px)").matches) {
+  //       if (canvasDims !== [250, 350]) {
+  //         setCanvasDims([250, 350]);
+  //       }
+  //     } else if (window.matchMedia("(max-width: 1200px)").matches) {
+  //       if (canvasDims !== [350, 450]) {
+  //         setCanvasDims([350, 450]);
+  //       }
+  //     } else {
+  //       if (canvasDims !== [450, 550]) {
+  //         setCanvasDims([450, 550]);
+  //       }
+  //     }
+  //   });
+  // }, []);
 
   return (
     <Router>
       <Defaults />
-      {windowSize > 1200 ? (
-        <>
-          <Cursor mining={mining} />
-          <Navbar setMining={setMining} />
-          <Hero setMining={setMining} />
-        </>
-      ) : (
-        <Temp>
-          <PageHeader>Apologies!</PageHeader>
-          <Text>
-            Please view this site on <span class="colored">Desktop/Laptop</span>{" "}
-            for the meantime - mobile version is still a work in progress!
-          </Text>
-        </Temp>
-      )}
+      <Cursor mining={mining} />
+      <Navbar setMining={setMining} />
+      <Hero setMining={setMining} />
     </Router>
   );
 }

@@ -8,13 +8,22 @@ import ChangelogPage from "./ChangelogPage";
 import ElsewherePage from "./ElsewherePage";
 
 const HeroContent = styled.div`
-  width: 45%;
   height: 70%;
-  padding: 0 100px;
   overflow-y: scroll;
-  margin-left: 50px;
+  margin-left: 150px;
 
   // border: 1px solid blue;
+
+  @media (max-width: 1200px) {
+    margin-left: 100px;
+  }
+
+  @media (max-width: 896px) {
+    margin-left: 0;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+  }
 `;
 
 const HeroContentComp = ({ setMining }) => {
