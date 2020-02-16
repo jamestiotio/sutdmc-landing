@@ -21,4 +21,7 @@ jobs:
          npm install
          npm install -g gh-pages --save-dev
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: |
+         git config --global user.email "timothy_liu@mymail.sutd.edu.sg"
+         git config --global user.name "opensutd"
+         npm run deploy
