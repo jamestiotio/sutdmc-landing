@@ -9,8 +9,6 @@ const HeroImage = styled.div`
   align-items: center;
   flex-shrink: 0;
 
-  // border: 1px solid green;
-
   width: 450px;
   height: 550px;
 
@@ -38,7 +36,7 @@ const StyledCanvas = styled.canvas`
 function HeroImageComp() {
   const location = useLocation();
   const canvasRef = useRef();
-  const mainImageRef = useRef();
+  const homeImageRef = useRef();
   const contributeImageRef = useRef();
   const changelogImageRef = useRef();
   const elsewhereImageRef = useRef();
@@ -70,7 +68,7 @@ function HeroImageComp() {
     let image;
     switch (location.pathname) {
       case "/":
-        image = mainImageRef.current;
+        image = homeImageRef.current;
         break;
       case "/contribute":
         image = contributeImageRef.current;
@@ -102,9 +100,9 @@ function HeroImageComp() {
         ref={canvasRef}
       ></StyledCanvas>
       <img
-        src={require("./assets/images/block-main.png")}
+        src={require("./assets/images/block-home.png")}
         alt="pic"
-        ref={mainImageRef}
+        ref={homeImageRef}
         style={{ display: "none" }}
       />
       <img
