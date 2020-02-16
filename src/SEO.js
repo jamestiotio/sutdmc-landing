@@ -10,7 +10,9 @@ const SEO = () => {
           location.slice(1)} | SUTD Minecraft`
       : "SUTD Minecraft",
     description = `A blocky and virtual rendition of SUTD in our very own student-hosted Minecraft server!`,
-    image = require("./assets/images/site-image.png"),
+    image =
+      "https://sutdmc.opensutd.org/" +
+      require("./assets/images/site-image.png"),
     sitename = "SUTD Minecraft",
     url = location
       ? `https://sutdmc.opensutd.org/${location}/`
