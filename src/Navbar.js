@@ -31,8 +31,15 @@ const Navbar = styled.ul`
     margin-left: 30px;
   }
 
-  & > li > a:hover {
-    color: var(--color-accent);
+  & > li > a {
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    &::selection {
+      background-color: var(--color-accent);
+      color: var(--color-background);
+    }
   }
 
   @media (max-width: 896px) {

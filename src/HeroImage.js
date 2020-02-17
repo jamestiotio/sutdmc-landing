@@ -11,12 +11,12 @@ const HeroImage = styled.div`
   align-items: center;
   flex-shrink: 0;
 
-  width: 450px;
-  height: 550px;
+  width: 400px;
+  height: 500px;
 
   @media (max-width: 1200px) {
-    width: 350px;
-    height: 450px;
+    width: 300px;
+    height: 400px;
   }
 
   @media (max-width: 896px) {

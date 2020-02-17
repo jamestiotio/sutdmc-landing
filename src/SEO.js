@@ -9,8 +9,7 @@ const SEO = () => {
       ? `${location.charAt(0).toUpperCase() +
           location.slice(1)} | SUTD Minecraft`
       : "SUTD Minecraft",
-    description = `A blocky and virtual rendition of SUTD in our very own student-hosted Minecraft server!`,
-    fbDescription = `A blocky and virtual rendition of SUTD in our very own Minecraft server!`,
+    description = `A blocky and virtual rendition of SUTD in a student-hosted Minecraft server!`,
     image =
       "https://sutdmc.opensutd.org" + require("./assets/images/site-image.png"),
     sitename = "SUTD Minecraft",
@@ -34,7 +33,7 @@ const SEO = () => {
       <meta name="twitter:url" content={url} />
 
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={fbDescription} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={sitename} />
       <meta property="og:url" content={url} />

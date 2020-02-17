@@ -19,9 +19,9 @@ function App() {
     <Router>
       <SEO />
       <Defaults />
-      <Cursor mining={mining} />
-      <Counter blockCount={blockCount} />
+      <Cursor mining={mining} blockCount={blockCount} />
       <MiningContext.Provider value={setMining}>
+        <Counter blockCount={blockCount} />
         <Div100vh>
           <Navbar />
           <Main blockCount={blockCount} setBlockCount={setBlockCount} />

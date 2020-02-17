@@ -1,119 +1,98 @@
 import React from "react";
 import styled from "styled-components";
 
-// import Text from "./components/Text";
+import Text from "./components/Text";
+import SocialCTA from "./components/SocialCTA";
 
 const Counter = styled.div`
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   z-index: 998;
-  max-width: 50vw;
   padding: 20px 40px;
-  font-family: var(--font-primary);
-  font-size: 18px;
-  color: var(--color-text);
-
-  & > p > span {
-    color: var(--color-accent);
-  }
-
-  & > p > a {
-    padding: 5px 12px;
-    border: 1px solid var(--color-text);
-    border-radius: 50px;
-    margin-left: 10px;
-
-    &:hover {
-      background: red;
-    }
-  }
-
-  & > p + p {
-    margin-top: 5px;
-  }
+  text-align: center;
+  width: 100%;
 
   @media (max-width: 896px) {
     display: none;
   }
 `;
 
-function fbShare(url, title, descr, image, winWidth, winHeight) {
-  var winTop = window.innerHeight / 2 - winHeight / 2;
-  var winLeft = window.innerWidth / 2 - winWidth / 2;
+const CounterText = styled(Text)`
+  font-size: 18px;
+`;
+
+const openSocialPopup = (e, platform) => {
+  let popupDims;
+  switch (platform) {
+    case "Facebook":
+      popupDims = [600, 400];
+      break;
+    case "Twitter":
+      popupDims = [550, 285];
+      break;
+    default:
+      popupDims = [0, 0];
+  }
+
+  var href = e.target.href;
+  e.preventDefault();
   window.open(
-    "https://www.facebook.com/sharer/sharer.php?u=sutdmc.opensutd.org"
+    href,
+    platform,
+    `toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,width=${
+      popupDims[0]
+    },height=${popupDims[1]},resizable=1`
   );
-  //   window.open(
-  //     "http://www.facebook.com/sharer.php?s=100&p[title]=" +
-  //       title +
-  //       "&p[summary]=" +
-  //       descr +
-  //       "&p[url]=" +
-  //       url +
-  //       "&p[images][0]=" +
-  //       image,
-  //     "sharer",
-  //     "top=" +
-  //       winTop +
-  //       ",left=" +
-  //       winLeft +
-  //       ",toolbar=0,status=0,width=" +
-  //       winWidth +
-  //       ",height=" +
-  //       winHeight
-  //   );
-}
+};
 
 const CounterComp = ({ blockCount }) => {
+  const achievement = { pickaxe: "", message: "" };
+
+  if (blockCount === 10) {
+    achievement.pickaxe = "The Super-Cool 3D-Printed Pickaxe";
+    achievement.message = "Congratulations, you have unlocked";
+  } else if (blockCount === 30) {
+    achievement.pickaxe = "The Useful Groupmates Summoning Pickaxe";
+    achievement.message =
+      "Congratulations (wowz you still here), you have unlocked";
+  } else if (blockCount === 50) {
+    achievement.pickaxe = "The Better Pickaxe By Design";
+    achievement.message =
+      "Congratulations (aren't your fingers tired lmao), you have unlocked";
+  } else if (blockCount === 100) {
+    achievement.pickaxe = "The Ultimate Pickaxe of Eternal 5.3 GPA";
+    achievement.message =
+      "For all the time wasted on clicking instead of mugging, you probably need";
+  }
+
   return (
     <>
-      {blockCount >= 1 ? (
+      {blockCount >= 3 ? (
         <Counter>
-          <p>{`${blockCount} ${blockCount > 1 ? "blocks" : "block"} mined!`}</p>
-          {blockCount >= 1 ? (
-            <>
-              <p>
-                Congratulations! You unlocked the{" "}
-                <span>Better Pickaxe By Design</span>!
-              </p>
-              <p>
-                Share your achievement:
-                <a
-                  id="fb-share"
-                  style={{ textDecoration: "none" }}
-                  type="icon_link"
-                  onClick={() =>
-                    fbShare(
-                      "sutdmc.opensutd.org",
-                      "HELLO",
-                      "HELLO",
-                      "http://goo.gl/dS52U",
-                      520,
-                      350
-                    )
-                  }
-                  href="javascript: void(0)"
+          <CounterText>
+            {blockCount} {blockCount > 1 ? "blocks" : "block"} mined!{" "}
+            {achievement.pickaxe ? (
+              <>
+                {achievement.message}{" "}
+                <span class="colored">{achievement.pickaxe}</span>! Share your
+                achievements:{" "}
+                <SocialCTA
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://sutdmc.opensutd.org/"
+                  onClick={e => openSocialPopup(e, "Facebook")}
                 >
-                  Share
-                </a>
-                {/* <a
-                  href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fsutdmc.opensutd.org%2F&t=CNN%26s%20website"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  Facebook
+                </SocialCTA>{" "}
+                <SocialCTA
+                  href={`http://twitter.com/share?text=I unlocked the ${achievement.pickaxe} on SUTD Minecraft! Come mine with me at&url=https://sutdmc.opensutd.org/&hashtags=betterworldbyminecraft`}
+                  onClick={e => openSocialPopup(e, "Twitter")}
                 >
-                  F
-                </a>
-                <a
-                  href="https://twitter.com/intent/tweet?text=Hello%20world"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  T
-                </a> */}
-              </p>
-            </>
-          ) : null}
+                  Twitter
+                </SocialCTA>
+              </>
+            ) : null}
+          </CounterText>
         </Counter>
       ) : null}
     </>
