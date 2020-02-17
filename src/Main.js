@@ -28,10 +28,10 @@ const Main = styled.main`
   }
 `;
 
-const MainComp = () => {
+const MainComp = ({ blockCount, setBlockCount }) => {
   return (
     <Main>
-      <HeroImage />
+      <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} />
       <Content />
     </Main>
   );
