@@ -37,4 +37,4 @@ const MainComp = ({ blockCount, setBlockCount }) => {
   );
 };
 
-export default MainComp;
+export default React.memo(MainComp);

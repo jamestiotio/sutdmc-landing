@@ -168,6 +168,7 @@ function HeroImageComp({ blockCount, setBlockCount }) {
         alt="Minecraft block"
         ref={blockImageRef}
         style={{ display: "none" }}
+        aria-hidden="true"
       />
     </HeroImage>
   );

@@ -68,6 +68,7 @@ const CursorComp = ({ mining, blockCount }) => {
       alt="pickaxe cursor"
       mining={mining}
       blockCount={blockCount}
+      aria-hidden="true"
     />
   );
 };

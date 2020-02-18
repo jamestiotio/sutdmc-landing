@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Modal = styled.div`
+const Modal = styled.dialog`
   width: 500px;
   height: 600px;
   padding: 50px;
@@ -22,20 +22,6 @@ const Overlay = styled.div`
   align-items: center;
 `;
 
-const DismissButton = styled.button`
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  font-family: var(--font-primary);
-  font-size: 42px;
-  color: var(--color-text);
-  cursor: none;
-
-  &:hover {
-    color: var(--color-grey);
-  }
-`;
-
 const ModalComp = ({ dismissFunc, children, ...others }) => {
   return (
     <Overlay
@@ -46,8 +32,7 @@ const ModalComp = ({ dismissFunc, children, ...others }) => {
         }
       }}
     >
-      <Modal {...others}>
-        <DismissButton onClick={dismissFunc}>x</DismissButton>
+      <Modal open {...others}>
         {children}
       </Modal>
     </Overlay>

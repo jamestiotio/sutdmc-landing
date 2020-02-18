@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 
 import Modal from "./components/Modal";
@@ -8,6 +8,20 @@ import CTA from "./components/CTA";
 const StyledModal = styled(Modal)`
   @media (max-width: 896px) {
     display: none;
+  }
+`;
+
+const DismissButton = styled.button`
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-family: var(--font-primary);
+  font-size: 42px;
+  color: var(--color-text);
+  cursor: none;
+
+  &:hover {
+    color: var(--color-grey);
   }
 `;
 
@@ -60,13 +74,20 @@ const openSocialPopup = (e, platform) => {
 };
 
 const AchievementComp = ({ dismissFunc, blockCount }) => {
+  const firstFocusRef = useRef();
+  const lastFocusRef = useRef();
+
+  useEffect(() => {
+    firstFocusRef.current.focus();
+  }, []);
+
   const pickaxe = { name: "" };
 
-  if (blockCount === 10) {
+  if (blockCount === 1) {
     pickaxe.name = "The Super-Cool 3D-Printed Pickaxe";
-  } else if (blockCount === 30) {
+  } else if (blockCount === 3) {
     pickaxe.name = "The Useful Groupmates Summoning Pickaxe";
-  } else if (blockCount === 50) {
+  } else if (blockCount === 5) {
     pickaxe.name = "The Better Pickaxe By Design";
   } else if (blockCount === 201) {
     pickaxe.name = "The Ultimate Pickaxe of Eternal 5.3 GPA";
@@ -74,14 +95,28 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
 
   return (
     <StyledModal dismissFunc={dismissFunc}>
+      <DismissButton
+        ref={firstFocusRef}
+        onClick={dismissFunc}
+        onKeyDown={e => {
+          if (e.shiftKey && e.key === "Tab") {
+            e.preventDefault();
+            lastFocusRef.current.focus();
+          } else if (e.key === "Escape") {
+            dismissFunc();
+          }
+        }}
+      >
+        x
+      </DismissButton>
       <Achievement>
         <AchievementImage
           src={require(`./assets/images/${
-            blockCount === 10
+            blockCount === 1
               ? "pickaxe-two"
-              : blockCount === 30
+              : blockCount === 3
               ? "pickaxe-three"
-              : blockCount === 50
+              : blockCount === 5
               ? "pickaxe-four"
               : blockCount === 201
               ? "pickaxe-five"
@@ -97,26 +132,26 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
           }
         />
         <Text>
-          {blockCount === 10 ? (
+          {blockCount === 1 ? (
             <>
               Congratulations, you have unlocked{" "}
-              <span class="colored">{pickaxe.name}</span>!
+              <span className="colored">{pickaxe.name}</span>!
             </>
-          ) : blockCount === 30 ? (
+          ) : blockCount === 3 ? (
             <>
               Congratulations (wowz you are still here), you have unlocked{" "}
-              <span class="colored">{pickaxe.name}</span>!
+              <span className="colored">{pickaxe.name}</span>!
             </>
-          ) : blockCount === 50 ? (
+          ) : blockCount === 5 ? (
             <>
               Seriously, don't you have anything better to do? But anyway, you
-              have unlocked <span class="colored">{pickaxe.name}</span>! Nothing
-              else after this, go and do your homework or something.
+              have unlocked <span className="colored">{pickaxe.name}</span>!
+              Nothing else after this, go and do your homework or something.
             </>
           ) : blockCount === 100 ? (
             <>
               Congratulations, you have unlocked{" "}
-              <span class="colored">...nothing</span>??? LOL, don't look so
+              <span className="colored">...nothing</span>??? LOL, don't look so
               disappointed, I already told you just now there was nothing
               else... 🙄
             </>
@@ -124,7 +159,7 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
             <>
               OK FINE LAST ONE I SWEAR, and honestly for all that time you have
               just wasted on clicking instead of mugging, you probably need{" "}
-              <span class="colored">{pickaxe.name}</span>! Now shoo!
+              <span className="colored">{pickaxe.name}</span>! Now shoo!
             </>
           ) : null}
         </Text>
@@ -133,14 +168,28 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
           <CTA
             href="https://www.facebook.com/sharer/sharer.php?u=https://sutdmc.opensutd.org/"
             onClick={e => openSocialPopup(e, "Facebook")}
+            onKeyDown={e => {
+              if (e.key === "Escape") {
+                dismissFunc();
+              }
+            }}
           >
             Facebook
           </CTA>
           <CTA
+            ref={lastFocusRef}
             href={`http://twitter.com/share?text=I unlocked ${
               pickaxe.name ? pickaxe.name : "nothing"
-            } on SUTD Minecraft! Come mine with me at&url=https://sutdmc.opensutd.org/&hashtags=betterworldbyminecraft`}
+            } on SUTD Minecraft! Come mine with me at&url=https://sutdmc.opensutd.org/&hashtags=abetterworldbyminecraft`}
             onClick={e => openSocialPopup(e, "Twitter")}
+            onKeyDown={e => {
+              if (!e.shiftKey && e.key === "Tab") {
+                e.preventDefault();
+                firstFocusRef.current.focus();
+              } else if (e.key === "Escape") {
+                dismissFunc();
+              }
+            }}
           >
             Twitter
           </CTA>

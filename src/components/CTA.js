@@ -26,11 +26,12 @@ const CTA = styled.a`
   }
 `;
 
-const CTAComp = ({ href, children, ...others }) => {
+const CTAComp = React.forwardRef(({ href, children, ...others }, ref) => {
   const setMining = useContext(MiningContext);
 
   return (
     <CTA
+      ref={ref}
       href={href}
       {...others}
       onMouseEnter={() => setMining(true)}
@@ -39,6 +40,6 @@ const CTAComp = ({ href, children, ...others }) => {
       {children}
     </CTA>
   );
-};
+});
 
 export default CTAComp;
