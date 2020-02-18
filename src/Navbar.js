@@ -51,7 +51,7 @@ const Navbar = styled.ul`
     }
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     font-size: 12px;
     padding: 0 20px;
   }

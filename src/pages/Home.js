@@ -10,7 +10,7 @@ const HomeComp = () => {
     <PageBase>
       <PageHeader>Welcome!</PageHeader>
       <Text>
-        Take a tour of a blocky and virtual rendition of SUTD in our very own
+        Take a tour of a blocky and virtual rendition of SUTD in a
         student-hosted Minecraft server - 'spleef' with your friends at the
         campus center, admire the Jackie Chan pavilion in all its 8-bit glory or
         simply chill at your virtual hostel room!

@@ -11,12 +11,12 @@ const HeroImage = styled.div`
   align-items: center;
   flex-shrink: 0;
 
-  width: 400px;
-  height: 500px;
+  width: 440px;
+  height: 540px;
 
   @media (max-width: 1200px) {
-    width: 300px;
-    height: 400px;
+    width: 340px;
+    height: 440px;
   }
 
   @media (max-width: 896px) {
@@ -24,7 +24,7 @@ const HeroImage = styled.div`
     height: 30vh;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     width: calc(25vh * 0.8);
     height: 25vh;
   }
@@ -129,15 +129,19 @@ function HeroImageComp({ blockCount, setBlockCount }) {
         ref={canvasRef}
         onMouseEnter={() => setMining(true)}
         onMouseLeave={() => setMining(false)}
-        onClick={e => {
-          blockImageRef.current.style.left = `${e.clientX - 20}px`;
-          blockImageRef.current.style.top = `${e.clientY - 20}px`;
-          blockImageRef.current.style.display = "block";
-          setBlockCount(blockCount + 1);
-          setTimeout(() => {
-            blockImageRef.current.style.display = "none";
-          }, 400);
-        }}
+        onClick={
+          window.matchMedia("(any-hover: hover)").matches
+            ? e => {
+                blockImageRef.current.style.left = `${e.clientX - 20}px`;
+                blockImageRef.current.style.top = `${e.clientY - 20}px`;
+                blockImageRef.current.style.display = "block";
+                setBlockCount(blockCount + 1);
+                setTimeout(() => {
+                  blockImageRef.current.style.display = "none";
+                }, 400);
+              }
+            : null
+        }
       ></StyledCanvas>
       <img
         src={require("./assets/images/block-home.png")}

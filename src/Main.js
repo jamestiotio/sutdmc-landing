@@ -23,7 +23,7 @@ const Main = styled.main`
     flex-direction: column;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     padding: 0 20px;
   }
 `;

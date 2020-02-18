@@ -31,7 +31,10 @@ const Defaults = createGlobalStyle`
       position: relative;
       background-color: var(--color-background);
       overflow-x: hidden;
-      cursor: none;
+
+      @media (any-hover: hover) {
+        cursor: none;
+      }
     }
 
     ul {
@@ -50,18 +53,9 @@ const Defaults = createGlobalStyle`
     a {
       color: inherit;
       text-decoration: none;
-      cursor: none;
-    }
 
-    @media (max-width: 896px) {
-      body {
-        cursor: auto;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-        cursor: pointer;
+      @media (any-hover: hover) {
+        cursor: none;
       }
     }
 `;

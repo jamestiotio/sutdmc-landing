@@ -9,19 +9,31 @@ import Text from "./components/Text";
 const Counter = styled.div`
   position: fixed;
   left: 50%;
-  bottom: 5vh;
+  top: 10vh;
   transform: translateX(-50%);
   z-index: 99;
   text-align: center;
   width: 100%;
 
   @media (max-width: 896px) {
-    display: none;
+    top: 7.5vh;
+  }
+
+  @media (max-width: 576px) {
+    top: 6vh;
   }
 `;
 
 const CounterText = styled(Text)`
   font-size: 18px;
+
+  @media (max-width: 896px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
 `;
 
 const CounterComp = ({ blockCount }) => {
@@ -44,7 +56,9 @@ const CounterComp = ({ blockCount }) => {
       {blockCount >= 3 ? (
         <Counter>
           <CounterText>
-            {blockCount} {blockCount > 1 ? "blocks" : "block"} mined!{" "}
+            <span className="colored">
+              {blockCount} {blockCount > 1 ? "blocks" : "block"} mined!{" "}
+            </span>
           </CounterText>
           {achievementModalOpen &&
             ReactDOM.createPortal(

@@ -20,7 +20,7 @@ const SubHeader = styled.h2`
     font-size: 20px;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     font-size: 18px;
   }
 `;

@@ -5,12 +5,6 @@ import Modal from "./components/Modal";
 import Text from "./components/Text";
 import CTA from "./components/CTA";
 
-const StyledModal = styled(Modal)`
-  @media (max-width: 896px) {
-    display: none;
-  }
-`;
-
 const DismissButton = styled.button`
   position: absolute;
   right: 20px;
@@ -102,7 +96,7 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
   }
 
   return (
-    <StyledModal dismissFunc={dismissFunc}>
+    <Modal dismissFunc={dismissFunc}>
       <DismissButton
         ref={firstFocusRef}
         onClick={dismissFunc}
@@ -203,7 +197,7 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
           </CTA>
         </ShareBlock>
       </Achievement>
-    </StyledModal>
+    </Modal>
   );
 };
 

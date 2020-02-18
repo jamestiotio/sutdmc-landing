@@ -32,7 +32,7 @@ const Cursor = styled.img`
   z-index: 9999;
   pointer-events: none;
 
-  @media (max-width: 896px) {
+  @media (any-hover: none) {
     display: none;
   }
 

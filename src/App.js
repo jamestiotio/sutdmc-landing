@@ -19,9 +19,13 @@ function App() {
     <Router>
       <SEO />
       <Defaults />
-      <Cursor mining={mining} blockCount={blockCount} />
+      {window.matchMedia("(any-hover: hover)").matches ? (
+        <Cursor mining={mining} blockCount={blockCount} />
+      ) : null}
       <MiningContext.Provider value={setMining}>
-        <Counter blockCount={blockCount} />
+        {window.matchMedia("(any-hover: hover)").matches ? (
+          <Counter blockCount={blockCount} />
+        ) : null}
         <Div100vh>
           <Navbar />
           <Main blockCount={blockCount} setBlockCount={setBlockCount} />

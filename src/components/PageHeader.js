@@ -19,7 +19,7 @@ const PageHeader = styled.h1`
     font-size: 34px;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     font-size: 28px;
   }
 `;
