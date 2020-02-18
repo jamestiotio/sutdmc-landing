@@ -20,7 +20,7 @@ const Cursor = styled.img`
   left: 0;
   top: 0;
   width: ${props =>
-    props.blockCount >= 100
+    props.blockCount >= 201
       ? "60px"
       : props.blockCount >= 50
       ? "55px"
@@ -29,7 +29,7 @@ const Cursor = styled.img`
       : props.blockCount >= 10
       ? "45px"
       : "40px"};
-  z-index: 999;
+  z-index: 9999;
   pointer-events: none;
 
   @media (max-width: 896px) {
@@ -55,7 +55,7 @@ const CursorComp = ({ mining, blockCount }) => {
     <Cursor
       ref={cursorRef}
       src={require(`./assets/images/${
-        blockCount >= 100
+        blockCount >= 201
           ? "pickaxe-five"
           : blockCount >= 50
           ? "pickaxe-four"
