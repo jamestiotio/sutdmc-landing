@@ -29,8 +29,8 @@ const CounterComp = ({ blockCount }) => {
 
   useEffect(() => {
     if (
-      blockCount === 1 ||
-      blockCount === 3 ||
+      blockCount === 10 ||
+      blockCount === 30 ||
       blockCount === 5 ||
       blockCount === 100 ||
       blockCount === 201
@@ -41,7 +41,7 @@ const CounterComp = ({ blockCount }) => {
 
   return (
     <>
-      {blockCount >= 1 ? (
+      {blockCount >= 3 ? (
         <Counter>
           <CounterText>
             {blockCount} {blockCount > 1 ? "blocks" : "block"} mined!{" "}

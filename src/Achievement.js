@@ -26,11 +26,8 @@ const DismissButton = styled.button`
 `;
 
 const Achievement = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  justify-content: space-evenly;
-  overflow: scroll;
+  overflow-y: auto;
 
   & > * + * {
     margin-top: 20px;
@@ -38,8 +35,9 @@ const Achievement = styled.div`
 `;
 
 const AchievementImage = styled.img`
+  display: block;
   width: 50px;
-  align-self: center;
+  margin: 0 auto;
   margin-bottom: 40px;
 `;
 
@@ -83,11 +81,11 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
 
   const pickaxe = { name: "" };
 
-  if (blockCount === 1) {
+  if (blockCount === 10) {
     pickaxe.name = "The Super-Cool 3D-Printed Pickaxe";
-  } else if (blockCount === 3) {
+  } else if (blockCount === 30) {
     pickaxe.name = "The Useful Groupmates Summoning Pickaxe";
-  } else if (blockCount === 5) {
+  } else if (blockCount === 50) {
     pickaxe.name = "The Better Pickaxe By Design";
   } else if (blockCount === 201) {
     pickaxe.name = "The Ultimate Pickaxe of Eternal 5.3 GPA";
@@ -112,11 +110,11 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
       <Achievement>
         <AchievementImage
           src={require(`./assets/images/${
-            blockCount === 1
+            blockCount === 10
               ? "pickaxe-two"
-              : blockCount === 3
+              : blockCount === 30
               ? "pickaxe-three"
-              : blockCount === 5
+              : blockCount === 50
               ? "pickaxe-four"
               : blockCount === 201
               ? "pickaxe-five"
@@ -132,21 +130,21 @@ const AchievementComp = ({ dismissFunc, blockCount }) => {
           }
         />
         <Text>
-          {blockCount === 1 ? (
+          {blockCount === 10 ? (
             <>
               Congratulations, you have unlocked{" "}
               <span className="colored">{pickaxe.name}</span>!
             </>
-          ) : blockCount === 3 ? (
+          ) : blockCount === 30 ? (
             <>
               Congratulations (wowz you are still here), you have unlocked{" "}
               <span className="colored">{pickaxe.name}</span>!
             </>
-          ) : blockCount === 5 ? (
+          ) : blockCount === 50 ? (
             <>
-              Seriously, don't you have anything better to do? But anyway, you
-              have unlocked <span className="colored">{pickaxe.name}</span>!
-              Nothing else after this, go and do your homework or something.
+              Seriously, don't you have anything better to do? Anyway, you have
+              unlocked <span className="colored">{pickaxe.name}</span>! There is
+              nothing else left after this, go do your homework or something.
             </>
           ) : blockCount === 100 ? (
             <>

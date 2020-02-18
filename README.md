@@ -1,4 +1,4 @@
-Landing page for [SUTD Minecraft](https://sutdmc.opensutd.org), a blocky and virtual rendition of SUTD in our very own student-hosted Minecraft server!
+Landing page for [SUTD Minecraft](https://sutdmc.opensutd.org), a blocky and virtual rendition of SUTD in a student-hosted Minecraft server!
 
 ## Instructions
 
