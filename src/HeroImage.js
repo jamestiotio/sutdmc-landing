@@ -1,6 +1,8 @@
-import React, { useRef, useEffect } from "react";
-import styled from "styled-components";
+import React, { useRef, useEffect, useContext } from "react";
+import styled, { keyframes } from "styled-components";
 import { useLocation } from "react-router-dom";
+
+import { MiningContext } from "./Context";
 
 const HeroImage = styled.div`
   position: relative;
@@ -9,12 +11,12 @@ const HeroImage = styled.div`
   align-items: center;
   flex-shrink: 0;
 
-  width: 450px;
-  height: 550px;
+  width: 400px;
+  height: 500px;
 
   @media (max-width: 1200px) {
-    width: 350px;
-    height: 450px;
+    width: 300px;
+    height: 400px;
   }
 
   @media (max-width: 896px) {
@@ -33,13 +35,40 @@ const StyledCanvas = styled.canvas`
   height: 100%;
 `;
 
-function HeroImageComp() {
+const Disappear = keyframes`
+  100% {
+    transform: translate(30px, -50px);
+    opacity: 0;
+  }
+`;
+
+const Block = styled.img`
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 50px;
+  animation: ${Disappear} 0.4s linear;
+
+  @media (max-width: 896px) {
+    width: 40px;
+  }
+
+  @media (max-width: 414px) {
+    width: 30px;
+  }
+`;
+
+function HeroImageComp({ blockCount, setBlockCount }) {
+  const setMining = useContext(MiningContext);
   const location = useLocation();
   const canvasRef = useRef();
   const homeImageRef = useRef();
   const contributeImageRef = useRef();
   const changelogImageRef = useRef();
   const elsewhereImageRef = useRef();
+  const blockImageRef = useRef();
 
   function pixelate(canvas, image, v) {
     const ctx = canvas.getContext("2d");
@@ -98,30 +127,48 @@ function HeroImageComp() {
         width="450"
         height="550"
         ref={canvasRef}
+        onMouseEnter={() => setMining(true)}
+        onMouseLeave={() => setMining(false)}
+        onClick={e => {
+          blockImageRef.current.style.left = `${e.clientX - 20}px`;
+          blockImageRef.current.style.top = `${e.clientY - 20}px`;
+          blockImageRef.current.style.display = "block";
+          setBlockCount(blockCount + 1);
+          setTimeout(() => {
+            blockImageRef.current.style.display = "none";
+          }, 400);
+        }}
       ></StyledCanvas>
       <img
         src={require("./assets/images/block-home.png")}
-        alt="pic"
+        alt="Minecraft block with words 'SUTD Land'"
         ref={homeImageRef}
         style={{ display: "none" }}
       />
       <img
         src={require("./assets/images/block-contribute.png")}
-        alt="pic"
+        alt="Minecraft block with words 'Help Leh!'"
         ref={contributeImageRef}
         style={{ display: "none" }}
       />
       <img
         src={require("./assets/images/block-changelog.png")}
-        alt="pic"
+        alt="Minecraft block with words 'Change Log'"
         ref={changelogImageRef}
         style={{ display: "none" }}
       />
       <img
         src={require("./assets/images/block-elsewhere.png")}
-        alt="pic"
+        alt="Minecraft block with words 'Else Where'"
         ref={elsewhereImageRef}
         style={{ display: "none" }}
+      />
+      <Block
+        src={require("./assets/images/block.png")}
+        alt="Minecraft block"
+        ref={blockImageRef}
+        style={{ display: "none" }}
+        aria-hidden="true"
       />
     </HeroImage>
   );

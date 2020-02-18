@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import styled, { css, keyframes } from "styled-components";
 
 const Mine = keyframes`
@@ -19,9 +19,19 @@ const Cursor = styled.img`
   position: fixed;
   left: 0;
   top: 0;
-  width: 40px;
-  z-index: 999;
+  width: ${props =>
+    props.blockCount >= 201
+      ? "60px"
+      : props.blockCount >= 50
+      ? "55px"
+      : props.blockCount >= 30
+      ? "50px"
+      : props.blockCount >= 10
+      ? "45px"
+      : "40px"};
+  z-index: 9999;
   pointer-events: none;
+  will-change: left, top;
 
   @media (max-width: 896px) {
     display: none;
@@ -30,24 +40,43 @@ const Cursor = styled.img`
   ${props => (props.mining ? MineMixin : null)}
 `;
 
-const CursorComp = ({ mining }) => {
+const CursorComp = ({ mining, blockCount }) => {
+  const cursorRef = useRef();
+  const timeoutRef = useRef();
+
   useEffect(() => {
-    const cursor = document.getElementById("cursor");
+    const cursor = cursorRef.current;
 
     window.addEventListener("mousemove", e => {
-      //   cursor.style.transform = `translate(${e.clientX - 20}px, ${e.clientY -
-      //     20}px)`;
-      cursor.style.left = `${e.clientX - 20}px`;
-      cursor.style.top = `${e.clientY - 20}px`;
+      if (timeoutRef.current) {
+        cancelAnimationFrame(timeoutRef.current);
+      }
+
+      timeoutRef.current = requestAnimationFrame(() => {
+        cursor.style.left = `${e.clientX - 20}px`;
+        cursor.style.top = `${e.clientY - 20}px`;
+      });
     });
   }, []);
 
   return (
     <Cursor
-      id="cursor"
-      src={require("./assets/images/pickaxe.png")}
+      ref={cursorRef}
+      src={require(`./assets/images/${
+        blockCount >= 201
+          ? "pickaxe-five"
+          : blockCount >= 50
+          ? "pickaxe-four"
+          : blockCount >= 30
+          ? "pickaxe-three"
+          : blockCount >= 10
+          ? "pickaxe-two"
+          : "pickaxe-one"
+      }.png`)}
       alt="pickaxe cursor"
       mining={mining}
+      blockCount={blockCount}
+      aria-hidden="true"
     />
   );
 };

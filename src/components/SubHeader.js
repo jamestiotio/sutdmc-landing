@@ -7,6 +7,11 @@ const SubHeader = styled.h2`
   color: var(--color-text);
   text-decoration: underline;
 
+  &::selection {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
+
   @media (max-width: 1200px) {
     font-size: 22px;
   }

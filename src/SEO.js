@@ -9,7 +9,7 @@ const SEO = () => {
       ? `${location.charAt(0).toUpperCase() +
           location.slice(1)} | SUTD Minecraft`
       : "SUTD Minecraft",
-    description = `A blocky and virtual rendition of SUTD in our very own student-hosted Minecraft server!`,
+    description = `A blocky and virtual rendition of SUTD in a student-hosted Minecraft server!`,
     image =
       "https://sutdmc.opensutd.org" + require("./assets/images/site-image.png"),
     sitename = "SUTD Minecraft",

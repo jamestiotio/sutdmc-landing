@@ -7,21 +7,24 @@ import { MiningContext } from "./Context";
 import SEO from "./SEO";
 import Defaults from "./Defaults";
 import Cursor from "./Cursor";
+import Counter from "./Counter";
 import Navbar from "./Navbar";
 import Main from "./Main";
 
 function App() {
   const [mining, setMining] = useState(false);
+  const [blockCount, setBlockCount] = useState(0);
 
   return (
     <Router>
       <SEO />
       <Defaults />
-      <Cursor mining={mining} />
+      <Cursor mining={mining} blockCount={blockCount} />
       <MiningContext.Provider value={setMining}>
+        <Counter blockCount={blockCount} />
         <Div100vh>
           <Navbar />
-          <Main />
+          <Main blockCount={blockCount} setBlockCount={setBlockCount} />
         </Div100vh>
       </MiningContext.Provider>
     </Router>

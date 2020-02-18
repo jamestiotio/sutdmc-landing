@@ -12,16 +12,13 @@ const CTA = styled.a`
   border-top: 6px inset rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
   color: var(--color-grey);
-  display: inline-block;
+  display: block;
   font-family: var(--font-primary);
   font-size: 24px;
-  margin: 1rem;
   min-width: 200px;
   padding: 0.5rem;
   text-transform: uppercase;
   width: auto;
-
-  transform: translateX(-10px);
 
   &:focus,
   &:hover {
@@ -29,11 +26,12 @@ const CTA = styled.a`
   }
 `;
 
-const CTAComp = ({ href, children, ...others }) => {
+const CTAComp = React.forwardRef(({ href, children, ...others }, ref) => {
   const setMining = useContext(MiningContext);
 
   return (
     <CTA
+      ref={ref}
       href={href}
       {...others}
       onMouseEnter={() => setMining(true)}
@@ -42,6 +40,6 @@ const CTAComp = ({ href, children, ...others }) => {
       {children}
     </CTA>
   );
-};
+});
 
 export default CTAComp;
