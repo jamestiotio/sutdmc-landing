@@ -26,8 +26,18 @@ const DismissButton = styled.button`
 `;
 
 const Achievement = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
+
+  & > *:first-child {
+    margin-top: auto;
+  }
+
+  & > *:last-child {
+    margin-bottom: auto;
+  }
 
   & > * + * {
     margin-top: 20px;

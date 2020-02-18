@@ -31,7 +31,7 @@ const CounterComp = ({ blockCount }) => {
     if (
       blockCount === 10 ||
       blockCount === 30 ||
-      blockCount === 5 ||
+      blockCount === 50 ||
       blockCount === 100 ||
       blockCount === 201
     ) {
