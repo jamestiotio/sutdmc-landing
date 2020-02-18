@@ -31,7 +31,6 @@ const Cursor = styled.img`
       : "40px"};
   z-index: 9999;
   pointer-events: none;
-  will-change: left, top;
 
   @media (max-width: 896px) {
     display: none;
@@ -42,20 +41,13 @@ const Cursor = styled.img`
 
 const CursorComp = ({ mining, blockCount }) => {
   const cursorRef = useRef();
-  const timeoutRef = useRef();
 
   useEffect(() => {
     const cursor = cursorRef.current;
 
     window.addEventListener("mousemove", e => {
-      if (timeoutRef.current) {
-        cancelAnimationFrame(timeoutRef.current);
-      }
-
-      timeoutRef.current = requestAnimationFrame(() => {
-        cursor.style.left = `${e.clientX - 20}px`;
-        cursor.style.top = `${e.clientY - 20}px`;
-      });
+      cursor.style.left = `${e.clientX - 20}px`;
+      cursor.style.top = `${e.clientY - 20}px`;
     });
   }, []);
 
