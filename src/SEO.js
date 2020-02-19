@@ -4,17 +4,25 @@ import { useLocation } from "react-router-dom";
 
 const SEO = () => {
   const location = useLocation().pathname.slice(1);
+  let currentPage;
+  if (location === "" || location === "about" || location === "elsewhere") {
+    currentPage = location;
+  } else {
+    currentPage = "404";
+  }
 
-  const title = location
-      ? `${location.charAt(0).toUpperCase() +
-          location.slice(1)} | SUTDLAND - SUTD In Minecraft`
+  const title = currentPage
+      ? `${currentPage.charAt(0).toUpperCase() +
+          currentPage.slice(1)} | SUTDLAND - SUTD In Minecraft`
       : "SUTDLAND - SUTD In Minecraft",
     description = `A blocky and virtual rendition of SUTD in a student-hosted Minecraft server!`,
     image =
       "https://sutdmc.opensutd.org" + require("./assets/images/site-image.png"),
     sitename = "SUTDLAND - SUTD In Minecraft",
-    url = location
-      ? `https://sutdmc.opensutd.org/${location}/`
+    url = currentPage
+      ? currentPage === "404"
+        ? "https://sutdmc.opensutd.org/"
+        : `https://sutdmc.opensutd.org/${currentPage}/`
       : "https://sutdmc.opensutd.org/",
     type = "website";
 
