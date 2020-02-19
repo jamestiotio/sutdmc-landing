@@ -6,6 +6,8 @@ const PageBase = styled.section`
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
+  padding-right: 20px;
+  // overflow-x: hidden;
 
   & > * + * {
     margin-top: 30px;
@@ -20,8 +22,12 @@ const PageBase = styled.section`
   }
 `;
 
-const PageBaseComp = ({ children, ...others }) => {
-  return <PageBase {...others}>{children}</PageBase>;
-};
+const PageBaseComp = React.forwardRef(({ children, ...others }, ref) => {
+  return (
+    <PageBase ref={ref} {...others}>
+      {children}
+    </PageBase>
+  );
+});
 
 export default PageBaseComp;
