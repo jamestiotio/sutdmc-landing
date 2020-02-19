@@ -19,6 +19,9 @@ const AboutComp = () => {
 
   useEffect(() => {
     setContainerWidth(containerRef.current.getBoundingClientRect().width);
+    window.addEventListener("resize", () => {
+      setContainerWidth(containerRef.current.getBoundingClientRect().width);
+    });
   }, []);
 
   return (
