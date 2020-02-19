@@ -67,6 +67,7 @@ function HeroImageComp({ blockCount, setBlockCount }) {
   const homeImageRef = useRef();
   const aboutImageRef = useRef();
   const elsewhereImageRef = useRef();
+  const errorImageRef = useRef();
   const blockImageRef = useRef();
 
   function pixelate(canvas, image, v) {
@@ -101,8 +102,18 @@ function HeroImageComp({ blockCount, setBlockCount }) {
       case "/about":
         image = aboutImageRef.current;
         break;
-      default:
+      case "/about/":
+        image = aboutImageRef.current;
+        break;
+      case "/elsewhere":
         image = elsewhereImageRef.current;
+        break;
+      case "/elsewhere/":
+        image = elsewhereImageRef.current;
+        break;
+      default:
+        image = errorImageRef.current;
+        break;
     }
 
     requestAnimationFrame(() => {
@@ -155,6 +166,12 @@ function HeroImageComp({ blockCount, setBlockCount }) {
         src={require("./assets/images/block-elsewhere.png")}
         alt="Minecraft block with words 'Else Where'"
         ref={elsewhereImageRef}
+        style={{ display: "none" }}
+      />
+      <img
+        src={require("./assets/images/block-404.png")}
+        alt="Minecraft block with words '404"
+        ref={errorImageRef}
         style={{ display: "none" }}
       />
       <Block

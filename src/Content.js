@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Elsewhere from "./pages/Elsewhere";
+import Error from "./pages/Error";
 
 const Content = styled.div`
   height: 70%;
@@ -35,6 +36,9 @@ const ContentComp = () => {
         </Route>
         <Route exact path="/elsewhere">
           <Elsewhere />
+        </Route>
+        <Route path="*">
+          <Error />
         </Route>
       </Switch>
     </Content>
