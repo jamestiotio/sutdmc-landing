@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Contribute from "./pages/Contribute";
-import Changelog from "./pages/Changelog";
+import About from "./pages/About";
 import Elsewhere from "./pages/Elsewhere";
 
 const Content = styled.div`
@@ -31,11 +30,8 @@ const ContentComp = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/contribute">
-          <Contribute />
-        </Route>
-        <Route exact path="/changelog">
-          <Changelog />
+        <Route exact path="/about">
+          <About />
         </Route>
         <Route exact path="/elsewhere">
           <Elsewhere />

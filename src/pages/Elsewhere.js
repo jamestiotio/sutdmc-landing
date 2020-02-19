@@ -67,15 +67,6 @@ const ElsewhereComp = () => {
       <ul>
         <li>
           <TextAnchor
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Server Source
-          </TextAnchor>
-        </li>
-        <li>
-          <TextAnchor
             href="https://github.com/OpenSUTD/sutdmc-landing"
             target="_blank"
             rel="noopener noreferrer"

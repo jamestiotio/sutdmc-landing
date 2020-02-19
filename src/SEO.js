@@ -7,12 +7,12 @@ const SEO = () => {
 
   const title = location
       ? `${location.charAt(0).toUpperCase() +
-          location.slice(1)} | SUTD Minecraft`
-      : "SUTD Minecraft",
+          location.slice(1)} | SUTDLAND - SUTD In Minecraft`
+      : "SUTDLAND - SUTD In Minecraft",
     description = `A blocky and virtual rendition of SUTD in a student-hosted Minecraft server!`,
     image =
       "https://sutdmc.opensutd.org" + require("./assets/images/site-image.png"),
-    sitename = "SUTD Minecraft",
+    sitename = "SUTDLAND - SUTD In Minecraft",
     url = location
       ? `https://sutdmc.opensutd.org/${location}/`
       : "https://sutdmc.opensutd.org/",

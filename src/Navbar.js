@@ -28,7 +28,7 @@ const Navbar = styled.ul`
   }
 
   & > li + li {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   & > li > a {
@@ -52,7 +52,6 @@ const Navbar = styled.ul`
   }
 
   @media (max-width: 576px) {
-    font-size: 12px;
     padding: 0 20px;
   }
 `;
@@ -65,10 +64,7 @@ function NavbarComp() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/contribute">Contribute</NavLink>
-        </li>
-        <li>
-          <NavLink to="/changelog">Changelog</NavLink>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
           <NavLink to="/elsewhere">Elsewhere</NavLink>

@@ -65,8 +65,7 @@ function HeroImageComp({ blockCount, setBlockCount }) {
   const location = useLocation();
   const canvasRef = useRef();
   const homeImageRef = useRef();
-  const contributeImageRef = useRef();
-  const changelogImageRef = useRef();
+  const aboutImageRef = useRef();
   const elsewhereImageRef = useRef();
   const blockImageRef = useRef();
 
@@ -99,11 +98,8 @@ function HeroImageComp({ blockCount, setBlockCount }) {
       case "/":
         image = homeImageRef.current;
         break;
-      case "/contribute":
-        image = contributeImageRef.current;
-        break;
-      case "/changelog":
-        image = changelogImageRef.current;
+      case "/about":
+        image = aboutImageRef.current;
         break;
       default:
         image = elsewhereImageRef.current;
@@ -150,15 +146,9 @@ function HeroImageComp({ blockCount, setBlockCount }) {
         style={{ display: "none" }}
       />
       <img
-        src={require("./assets/images/block-contribute.png")}
-        alt="Minecraft block with words 'Help Leh!'"
-        ref={contributeImageRef}
-        style={{ display: "none" }}
-      />
-      <img
-        src={require("./assets/images/block-changelog.png")}
-        alt="Minecraft block with words 'Change Log'"
-        ref={changelogImageRef}
+        src={require("./assets/images/block-about.png")}
+        alt="Minecraft block with words 'About This'"
+        ref={aboutImageRef}
         style={{ display: "none" }}
       />
       <img
