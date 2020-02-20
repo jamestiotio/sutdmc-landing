@@ -67,13 +67,6 @@ const AboutComp = () => {
       </div>
       <div>
         <ReactCompareImage
-          leftImage={require("../assets/images/before-after/b2_walkway.jpg")}
-          rightImage={require("../assets/images/before-after/b2_walkway.png")}
-          sliderLineColor="var(--color-accent)"
-        />
-      </div>
-      <div>
-        <ReactCompareImage
           leftImage={require("../assets/images/before-after/library.jpg")}
           rightImage={require("../assets/images/before-after/library.png")}
           sliderLineColor="var(--color-accent)"
