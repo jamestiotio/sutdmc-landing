@@ -67,6 +67,9 @@ function NavbarComp() {
           <NavLink to="/about">About</NavLink>
         </li>
         <li>
+          <NavLink to="/treasure">Treasure!</NavLink>
+        </li>
+        <li>
           <NavLink to="/elsewhere">Elsewhere</NavLink>
         </li>
       </Navbar>
