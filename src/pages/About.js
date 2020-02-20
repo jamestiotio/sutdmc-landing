@@ -1,5 +1,5 @@
-import React, { Suspense } from "react";
-// import ReactCompareImage from "react-compare-image";
+import React from "react";
+import ReactCompareImage from "react-compare-image";
 
 import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";
@@ -7,9 +7,7 @@ import SubHeader from "../components/SubHeader";
 import Text from "../components/Text";
 import TextAnchor from "../components/TextAnchor";
 
-const ReactCompareImage = React.lazy(() => import("react-compare-image"));
-
-const AboutComp = () => {
+const AboutComp = ({ mainContentLoaded }) => {
   return (
     <PageBase>
       <PageHeader>About This Project</PageHeader>
@@ -53,51 +51,45 @@ const AboutComp = () => {
           </TextAnchor>
         </li>
       </ul>
-      <div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <ReactCompareImage
-            leftImage={require("../assets/images/before-after/b1_dbs.jpg")}
-            rightImage={require("../assets/images/before-after/b1_dbs.png")}
-            sliderLineColor="var(--color-accent)"
-          />
-        </Suspense>
-      </div>
-      <div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <ReactCompareImage
-            leftImage={require("../assets/images/before-after/campus.jpg")}
-            rightImage={require("../assets/images/before-after/campus.png")}
-            sliderLineColor="var(--color-accent)"
-          />
-        </Suspense>
-      </div>
-      <div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <ReactCompareImage
-            leftImage={require("../assets/images/before-after/library.jpg")}
-            rightImage={require("../assets/images/before-after/library.png")}
-            sliderLineColor="var(--color-accent)"
-          />
-        </Suspense>
-      </div>
-      <div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <ReactCompareImage
-            leftImage={require("../assets/images/before-after/b2_inner.jpg")}
-            rightImage={require("../assets/images/before-after/b2_inner.png")}
-            sliderLineColor="var(--color-accent)"
-          />
-        </Suspense>
-      </div>
-      <div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <ReactCompareImage
-            leftImage={require("../assets/images/before-after/b2.jpg")}
-            rightImage={require("../assets/images/before-after/b2.png")}
-            sliderLineColor="var(--color-accent)"
-          />
-        </Suspense>
-      </div>
+      {mainContentLoaded ? (
+        <>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/b1_dbs.jpg")}
+              rightImage={require("../assets/images/before-after/b1_dbs.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/campus.jpg")}
+              rightImage={require("../assets/images/before-after/campus.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/library.jpg")}
+              rightImage={require("../assets/images/before-after/library.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/b2_inner.jpg")}
+              rightImage={require("../assets/images/before-after/b2_inner.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/b2.jpg")}
+              rightImage={require("../assets/images/before-after/b2.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+        </>
+      ) : null}
     </PageBase>
   );
 };
