@@ -5,10 +5,24 @@ import { useLocation } from "react-router-dom";
 const SEO = () => {
   const location = useLocation().pathname.slice(1);
   let currentPage;
-  if (location === "" || location === "about" || location === "elsewhere") {
-    currentPage = location;
-  } else {
-    currentPage = "404";
+  switch (location) {
+    case "":
+      currentPage = "";
+      break;
+    case "about":
+      currentPage = "about";
+      break;
+    case "about/":
+      currentPage = "about";
+      break;
+    case "elsewhere":
+      currentPage = "elsewhere";
+      break;
+    case "elsewhere/":
+      currentPage = "elsewhere";
+      break;
+    default:
+      currentPage = "404";
   }
 
   const title = currentPage
