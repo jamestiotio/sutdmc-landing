@@ -23,6 +23,7 @@ const Main = styled.main`
     padding: 20px 15%;
     height: auto;
     flex-direction: column;
+    margin-top: 0px;
   }
 
   @media (max-width: 576px) {

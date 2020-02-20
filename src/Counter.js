@@ -9,7 +9,7 @@ import Text from "./components/Text";
 const Counter = styled.div`
   position: fixed;
   left: 50%;
-  top: 10vh;
+  top: 15vh;
   transform: translateX(-50%);
   z-index: 99;
   text-align: center;
