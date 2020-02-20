@@ -66,6 +66,7 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
   const canvasRef = useRef();
   const homeImageRef = useRef();
   const aboutImageRef = useRef();
+  const treasureImageRef = useRef();
   const elsewhereImageRef = useRef();
   const errorImageRef = useRef();
   const blockImageRef = useRef();
@@ -104,6 +105,12 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         break;
       case "/about/":
         image = aboutImageRef.current;
+        break;
+      case "/treasure":
+        image = treasureImageRef.current;
+        break;
+      case "/treasure/":
+        image = treasureImageRef.current;
         break;
       case "/elsewhere":
         image = elsewhereImageRef.current;
@@ -162,6 +169,12 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         src={require("./assets/images/block-about.png")}
         alt="Minecraft block with words 'About This'"
         ref={aboutImageRef}
+        style={{ display: "none" }}
+      />
+      <img
+        src={require("./assets/images/block-treasure.png")}
+        alt="Minecraft block with words 'Treasure Hunt'"
+        ref={treasureImageRef}
         style={{ display: "none" }}
       />
       <img
