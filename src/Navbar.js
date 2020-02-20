@@ -10,25 +10,17 @@ const NavLink = styled(Link)`
 `;
 
 const Navbar = styled.ul`
-  width: 100vw;
+  width: 50vw;
+  margin-left: 45vw;
   height: 60px;
-  padding: 0 50px;
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
   font-family: var(--font-primary);
   font-size: 18px;
   color: var(--color-text);
 
   & > li {
     height: 100%;
-  }
-
-  & > li:first-child {
-    margin-left: auto;
-  }
-
-  & > li + li {
-    margin-left: 50px;
   }
 
   & > li > a {
@@ -43,16 +35,9 @@ const Navbar = styled.ul`
   }
 
   @media (max-width: 896px) {
+    width: 100vw;
+    margin: 0;
     font-size: 16px;
-    justify-content: space-evenly;
-
-    & > li:first-child {
-      margin-left: 0;
-    }
-  }
-
-  @media (max-width: 576px) {
-    padding: 0 20px;
   }
 `;
 
