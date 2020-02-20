@@ -60,7 +60,7 @@ const Block = styled.img`
   }
 `;
 
-function HeroImageComp({ blockCount, setBlockCount }) {
+function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
   const setMining = useContext(MiningContext);
   const location = useLocation();
   const canvasRef = useRef();
@@ -115,6 +115,8 @@ function HeroImageComp({ blockCount, setBlockCount }) {
         image = errorImageRef.current;
         break;
     }
+
+    image.onload = () => setMainContentLoaded(true);
 
     requestAnimationFrame(() => {
       pixelate(canvas, image, 3);

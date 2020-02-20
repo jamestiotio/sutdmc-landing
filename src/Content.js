@@ -24,7 +24,7 @@ const Content = styled.div`
   }
 `;
 
-const ContentComp = () => {
+const ContentComp = ({ mainContentLoaded }) => {
   return (
     <Content>
       <Switch>
@@ -32,7 +32,7 @@ const ContentComp = () => {
           <Home />
         </Route>
         <Route exact path="/about">
-          <About />
+          <About mainContentLoaded={mainContentLoaded} />
         </Route>
         <Route exact path="/elsewhere">
           <Elsewhere />

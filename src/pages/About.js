@@ -1,6 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
-import styled from "styled-components";
-import BeforeAfterSlider from "react-before-after-slider";
+import React from "react";
+import ReactCompareImage from "react-compare-image";
 
 import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";
@@ -8,22 +7,7 @@ import SubHeader from "../components/SubHeader";
 import Text from "../components/Text";
 import TextAnchor from "../components/TextAnchor";
 
-const BeforeAfterSliderWrapper = styled.div`
-  width: 100%;
-  overflow-x: hidden;
-`;
-
-const AboutComp = () => {
-  const containerRef = useRef();
-  const [containerWidth, setContainerWidth] = useState(0);
-
-  useEffect(() => {
-    setContainerWidth(containerRef.current.getBoundingClientRect().width);
-    window.addEventListener("resize", () => {
-      setContainerWidth(containerRef.current.getBoundingClientRect().width);
-    });
-  }, []);
-
+const AboutComp = ({ mainContentLoaded }) => {
   return (
     <PageBase>
       <PageHeader>About This Project</PageHeader>
@@ -67,14 +51,45 @@ const AboutComp = () => {
           </TextAnchor>
         </li>
       </ul>
-      <BeforeAfterSliderWrapper ref={containerRef}>
-        <BeforeAfterSlider
-          before={require("../assets/images/site-image.png")}
-          after={require("../assets/images/site-image.png")}
-          width={containerWidth}
-          height={300}
-        />
-      </BeforeAfterSliderWrapper>
+      {mainContentLoaded ? (
+        <>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/b1_dbs.jpg")}
+              rightImage={require("../assets/images/before-after/b1_dbs.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/campus.jpg")}
+              rightImage={require("../assets/images/before-after/campus.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/library.jpg")}
+              rightImage={require("../assets/images/before-after/library.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/b2_inner.jpg")}
+              rightImage={require("../assets/images/before-after/b2_inner.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+          <div>
+            <ReactCompareImage
+              leftImage={require("../assets/images/before-after/b2.jpg")}
+              rightImage={require("../assets/images/before-after/b2.png")}
+              sliderLineColor="var(--color-accent)"
+            />
+          </div>
+        </>
+      ) : null}
     </PageBase>
   );
 };
