@@ -12,7 +12,6 @@ const NavLink = styled(Link)`
 
 const Navbar = styled.ul`
   width: 50vw;
-  margin-top: 5vh;
   margin-left: 45vw;
   height: 60px;
   display: flex;
@@ -47,11 +46,16 @@ const Navbar = styled.ul`
     width: 100vw;
     margin: 0;
     font-size: 16px;
+    justify-content: space-between;
   }
 `;
 
 const NavElement = styled.nav`
   padding-top: 5vh;
+
+  @media (max-width: 896px) {
+    padding-top: 0;
+  }
 `;
 
 function NavbarComp() {
