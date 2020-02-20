@@ -6,7 +6,6 @@ const PageBase = styled.section`
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
-  padding-right: 20px;
 
   & > * + * {
     margin-top: 30px;
