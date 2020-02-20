@@ -9,8 +9,8 @@ import Elsewhere from "./pages/Elsewhere";
 import Error from "./pages/Error";
 
 const Content = styled.div`
-  height: 70%;
-  overflow-y: scroll;
+  max-height: 100%;
+  overflow-y: auto;
   margin-left: 150px;
 
   @media (max-width: 1200px) {
