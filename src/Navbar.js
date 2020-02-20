@@ -50,9 +50,13 @@ const Navbar = styled.ul`
   }
 `;
 
+const NavElement = styled.nav`
+  padding-top: 5vh;
+`;
+
 function NavbarComp() {
   return (
-    <nav>
+    <NavElement>
       <Navbar>
         <li>
           <NavLink to="/">Home</NavLink>
@@ -67,7 +71,7 @@ function NavbarComp() {
           <NavLink to="/elsewhere">Elsewhere</NavLink>
         </li>
       </Navbar>
-    </nav>
+    </NavElement>
   );
 }
 

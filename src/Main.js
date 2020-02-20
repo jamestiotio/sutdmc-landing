@@ -6,12 +6,13 @@ import Content from "./Content";
 
 const Main = styled.main`
   width: 100vw;
-  max-width: 1680px;
-  height: calc(100% - 60px);
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 10%;
 
   @media (max-width: 1200px) {
@@ -20,10 +21,12 @@ const Main = styled.main`
 
   @media (max-width: 896px) {
     padding: 20px 15%;
+    height: auto;
     flex-direction: column;
   }
 
   @media (max-width: 576px) {
+    height: auto;
     padding: 0 20px;
   }
 `;
