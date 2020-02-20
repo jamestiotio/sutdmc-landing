@@ -15,7 +15,8 @@ const HomeComp = () => {
         campus center, admire the Jackie Chan pavilion in all its 8-bit glory or
         simply chill at your virtual hostel room!
       </Text>
-      <CTA href="https://sutdmc-map.opensutd.org/">View Our Progress</CTA>
+      <Text> Server Opens 22 Feb 8am. Come back for updates!</Text>
+      <CTA href="https://sutdmc-map.opensutd.org/">Live Preview</CTA>
     </PageBase>
   );
 };
