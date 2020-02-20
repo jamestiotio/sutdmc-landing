@@ -11,11 +11,13 @@ const HomeComp = () => {
       <PageHeader>Welcome!</PageHeader>
       <Text>
         Take a tour of a blocky and virtual rendition of SUTD in a
-        student-hosted Minecraft server - 'spleef' with your friends at the
-        campus center, admire the Jackie Chan pavilion in all its 8-bit glory or
-        simply chill at your virtual hostel room!
+        student-hosted Minecraft server - walk around our open campus and admire
+        the Jackie Chan pavilion in all its 8-bit glory. If you're up for a
+        challenge, come find treasures hidden across the map and win real life
+        prizes!
       </Text>
-      <CTA href="https://sutdmc-map.opensutd.org/">View Our Progress</CTA>
+      <Text> Server Opens 22 Feb 8am. Come back for updates!</Text>
+      <CTA href="https://sutdmc-map.opensutd.org/">Live Preview</CTA>
     </PageBase>
   );
 };
