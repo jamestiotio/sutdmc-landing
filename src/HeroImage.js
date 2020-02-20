@@ -151,31 +151,31 @@ function HeroImageComp({ blockCount, setBlockCount }) {
         }
       ></StyledCanvas>
       <img
-        src={require("./assets/images/block-home.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block-home.png")}
         alt="Minecraft block with words 'SUTD Land'"
         ref={homeImageRef}
         style={{ display: "none" }}
       />
       <img
-        src={require("./assets/images/block-about.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block-about.png")}
         alt="Minecraft block with words 'About This'"
         ref={aboutImageRef}
         style={{ display: "none" }}
       />
       <img
-        src={require("./assets/images/block-elsewhere.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block-elsewhere.png")}
         alt="Minecraft block with words 'Else Where'"
         ref={elsewhereImageRef}
         style={{ display: "none" }}
       />
       <img
-        src={require("./assets/images/block-404.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block-404.png")}
         alt="Minecraft block with words '404"
         ref={errorImageRef}
         style={{ display: "none" }}
       />
       <Block
-        src={require("./assets/images/block.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block.png")}
         alt="Minecraft block"
         ref={blockImageRef}
         style={{ display: "none" }}
