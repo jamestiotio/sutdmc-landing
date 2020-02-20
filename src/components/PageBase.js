@@ -7,7 +7,6 @@ const PageBase = styled.section`
   justify-content: center;
   min-height: 100%;
   padding-right: 20px;
-  // overflow-x: hidden;
 
   & > * + * {
     margin-top: 30px;

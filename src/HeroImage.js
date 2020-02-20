@@ -116,8 +116,6 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         break;
     }
 
-    image.onload = () => setMainContentLoaded(true);
-
     requestAnimationFrame(() => {
       pixelate(canvas, image, 3);
       setTimeout(() => pixelate(canvas, image, 4), 100);
@@ -163,6 +161,10 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         alt="Minecraft block with words 'About This'"
         ref={aboutImageRef}
         style={{ display: "none" }}
+        onLoad={() => {
+          pixelate(canvasRef.current, aboutImageRef.current, 100);
+          setMainContentLoaded(true);
+        }}
       />
       <img
         src={require("./assets/images/block-elsewhere.png")}
