@@ -6,34 +6,35 @@ import Link from "./components/Link";
 const NavLink = styled(Link)`
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 `;
 
 const Navbar = styled.ul`
-  width: 100vw;
+  width: 50vw;
+  margin-top: 5vh;
+  margin-left: 45vw;
   height: 60px;
-  padding: 0 50px;
   display: flex;
-  align-items: center;
+  list-style: none;
+  justify-content: space-evenly;
   font-family: var(--font-primary);
-  font-size: 18px;
+  font-size: 2.5rem;
   color: var(--color-text);
 
   & > li {
-    height: 100%;
-  }
-
-  & > li:first-child {
-    margin-left: auto;
-  }
-
-  & > li + li {
-    margin-left: 50px;
   }
 
   & > li > a {
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 2px solid;
     &:hover {
-      color: var(--color-accent);
+      background-color: var(--color-accent);
+      color: var(--color-background);
     }
 
     &::selection {
@@ -43,16 +44,9 @@ const Navbar = styled.ul`
   }
 
   @media (max-width: 896px) {
+    width: 100vw;
+    margin: 0;
     font-size: 16px;
-    justify-content: space-evenly;
-
-    & > li:first-child {
-      margin-left: 0;
-    }
-  }
-
-  @media (max-width: 576px) {
-    padding: 0 20px;
   }
 `;
 
