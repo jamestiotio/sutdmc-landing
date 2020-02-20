@@ -60,7 +60,7 @@ const Block = styled.img`
   }
 `;
 
-function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
+function HeroImageComp({ blockCount, setBlockCount }) {
   const setMining = useContext(MiningContext);
   const location = useLocation();
   const canvasRef = useRef();
@@ -161,10 +161,6 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         alt="Minecraft block with words 'About This'"
         ref={aboutImageRef}
         style={{ display: "none" }}
-        onLoad={() => {
-          pixelate(canvasRef.current, aboutImageRef.current, 100);
-          setMainContentLoaded(true);
-        }}
       />
       <img
         src={require("./assets/images/block-elsewhere.png")}

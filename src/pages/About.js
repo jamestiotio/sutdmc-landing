@@ -7,7 +7,7 @@ import SubHeader from "../components/SubHeader";
 import Text from "../components/Text";
 import TextAnchor from "../components/TextAnchor";
 
-const AboutComp = ({ mainContentLoaded }) => {
+const AboutComp = () => {
   return (
     <PageBase>
       <PageHeader>About This Project</PageHeader>
@@ -51,45 +51,41 @@ const AboutComp = ({ mainContentLoaded }) => {
           </TextAnchor>
         </li>
       </ul>
-      {mainContentLoaded ? (
-        <>
-          <div>
-            <ReactCompareImage
-              leftImage={require("../assets/images/before-after/b1_dbs.jpg")}
-              rightImage={require("../assets/images/before-after/b1_dbs.png")}
-              sliderLineColor="var(--color-accent)"
-            />
-          </div>
-          <div>
-            <ReactCompareImage
-              leftImage={require("../assets/images/before-after/campus.jpg")}
-              rightImage={require("../assets/images/before-after/campus.png")}
-              sliderLineColor="var(--color-accent)"
-            />
-          </div>
-          <div>
-            <ReactCompareImage
-              leftImage={require("../assets/images/before-after/library.jpg")}
-              rightImage={require("../assets/images/before-after/library.png")}
-              sliderLineColor="var(--color-accent)"
-            />
-          </div>
-          <div>
-            <ReactCompareImage
-              leftImage={require("../assets/images/before-after/b2_inner.jpg")}
-              rightImage={require("../assets/images/before-after/b2_inner.png")}
-              sliderLineColor="var(--color-accent)"
-            />
-          </div>
-          <div>
-            <ReactCompareImage
-              leftImage={require("../assets/images/before-after/b2.jpg")}
-              rightImage={require("../assets/images/before-after/b2.png")}
-              sliderLineColor="var(--color-accent)"
-            />
-          </div>
-        </>
-      ) : null}
+      <div>
+        <ReactCompareImage
+          leftImage={require("../assets/images/before-after/b1_dbs.jpg")}
+          rightImage={require("../assets/images/before-after/b1_dbs.png")}
+          sliderLineColor="var(--color-accent)"
+        />
+      </div>
+      <div>
+        <ReactCompareImage
+          leftImage={require("../assets/images/before-after/campus.jpg")}
+          rightImage={require("../assets/images/before-after/campus.png")}
+          sliderLineColor="var(--color-accent)"
+        />
+      </div>
+      <div>
+        <ReactCompareImage
+          leftImage={require("../assets/images/before-after/library.jpg")}
+          rightImage={require("../assets/images/before-after/library.png")}
+          sliderLineColor="var(--color-accent)"
+        />
+      </div>
+      <div>
+        <ReactCompareImage
+          leftImage={require("../assets/images/before-after/b2_inner.jpg")}
+          rightImage={require("../assets/images/before-after/b2_inner.png")}
+          sliderLineColor="var(--color-accent)"
+        />
+      </div>
+      <div>
+        <ReactCompareImage
+          leftImage={require("../assets/images/before-after/b2.jpg")}
+          rightImage={require("../assets/images/before-after/b2.png")}
+          sliderLineColor="var(--color-accent)"
+        />
+      </div>
     </PageBase>
   );
 };
