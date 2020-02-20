@@ -6,26 +6,35 @@ import Link from "./components/Link";
 const NavLink = styled(Link)`
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 `;
 
 const Navbar = styled.ul`
   width: 50vw;
+  margin-top: 5vh;
   margin-left: 45vw;
   height: 60px;
   display: flex;
+  list-style: none;
   justify-content: space-evenly;
   font-family: var(--font-primary);
-  font-size: 18px;
+  font-size: 2.5rem;
   color: var(--color-text);
 
   & > li {
-    height: 100%;
   }
 
   & > li > a {
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 2px solid;
     &:hover {
-      color: var(--color-accent);
+      background-color: var(--color-accent);
+      color: var(--color-background);
     }
 
     &::selection {
