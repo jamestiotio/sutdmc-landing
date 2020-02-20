@@ -16,6 +16,7 @@ const Counter = styled.div`
   width: 100%;
 
   @media (max-width: 896px) {
+    position: absolute;
     top: 7.5vh;
   }
 
