@@ -116,6 +116,8 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         break;
     }
 
+    image.onload = () => setMainContentLoaded(true);
+
     requestAnimationFrame(() => {
       pixelate(canvas, image, 3);
       setTimeout(() => pixelate(canvas, image, 4), 100);
@@ -124,7 +126,6 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
       setTimeout(() => pixelate(canvas, image, 7), 400);
       setTimeout(() => pixelate(canvas, image, 8), 500);
       setTimeout(() => pixelate(canvas, image, 100), 600);
-      setMainContentLoaded(true);
     });
   }, [location]);
 
