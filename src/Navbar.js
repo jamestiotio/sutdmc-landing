@@ -30,7 +30,6 @@ const Navbar = styled.ul`
     padding-bottom: 5%;
     padding-left: 15%;
     padding-right: 15%;
-    border: 2px solid;
     &:hover {
       background-color: var(--color-accent);
       color: var(--color-background);
