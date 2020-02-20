@@ -60,7 +60,7 @@ const Block = styled.img`
   }
 `;
 
-function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
+function HeroImageComp({ blockCount, setBlockCount }) {
   const setMining = useContext(MiningContext);
   const location = useLocation();
   const canvasRef = useRef();
@@ -123,8 +123,6 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         break;
     }
 
-    image.onload = () => setMainContentLoaded(true);
-
     requestAnimationFrame(() => {
       pixelate(canvas, image, 3);
       setTimeout(() => pixelate(canvas, image, 4), 100);
@@ -160,13 +158,13 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         }
       ></StyledCanvas>
       <img
-        src={require("./assets/images/block-home.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block-home.png")}
         alt="Minecraft block with words 'SUTD Land'"
         ref={homeImageRef}
         style={{ display: "none" }}
       />
       <img
-        src={require("./assets/images/block-about.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block-about.png")}
         alt="Minecraft block with words 'About This'"
         ref={aboutImageRef}
         style={{ display: "none" }}
@@ -178,19 +176,19 @@ function HeroImageComp({ blockCount, setBlockCount, setMainContentLoaded }) {
         style={{ display: "none" }}
       />
       <img
-        src={require("./assets/images/block-elsewhere.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block-elsewhere.png")}
         alt="Minecraft block with words 'Else Where'"
         ref={elsewhereImageRef}
         style={{ display: "none" }}
       />
       <img
-        src={require("./assets/images/block-404.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block-404.png")}
         alt="Minecraft block with words '404"
         ref={errorImageRef}
         style={{ display: "none" }}
       />
       <Block
-        src={require("./assets/images/block.png")}
+        src={require(/* webpackPreload: true */ "./assets/images/block.png")}
         alt="Minecraft block"
         ref={blockImageRef}
         style={{ display: "none" }}

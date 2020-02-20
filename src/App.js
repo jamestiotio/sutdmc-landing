@@ -14,7 +14,6 @@ import Main from "./Main";
 function App() {
   const [mining, setMining] = useState(false);
   const [blockCount, setBlockCount] = useState(0);
-  const [mainContentLoaded, setMainContentLoaded] = useState(false);
 
   return (
     <Router>
@@ -29,12 +28,7 @@ function App() {
         ) : null}
         <Div100vh>
           <Navbar />
-          <Main
-            blockCount={blockCount}
-            setBlockCount={setBlockCount}
-            mainContentLoaded={mainContentLoaded}
-            setMainContentLoaded={setMainContentLoaded}
-          />
+          <Main blockCount={blockCount} setBlockCount={setBlockCount} />
         </Div100vh>
       </MiningContext.Provider>
     </Router>
