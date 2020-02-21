@@ -14,7 +14,7 @@ const HomeComp = () => {
         student-hosted Minecraft server. If you're up for a challenge, come find
         treasures hidden across the map and win real life prizes!
       </Text>
-      <Text> Server Opens 22 Feb 8am. Come back for updates!</Text>
+      <Text> Server Opens 22 Feb 10am. Come back for updates!</Text>
       <CTA href="https://sutdmc-map.opensutd.org/">Live Preview</CTA>
     </PageBase>
   );
