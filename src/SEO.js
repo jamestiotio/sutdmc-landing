@@ -15,6 +15,12 @@ const SEO = () => {
     case "about/":
       currentPage = "about";
       break;
+    case "treasure":
+      currentPage = "treasure";
+      break;
+    case "treasure/":
+      currentPage = "treasure";
+      break;
     case "elsewhere":
       currentPage = "elsewhere";
       break;

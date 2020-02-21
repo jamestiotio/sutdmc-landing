@@ -9,13 +9,14 @@ import Text from "./components/Text";
 const Counter = styled.div`
   position: fixed;
   left: 50%;
-  top: 10vh;
+  top: 15vh;
   transform: translateX(-50%);
   z-index: 99;
   text-align: center;
   width: 100%;
 
   @media (max-width: 896px) {
+    position: absolute;
     top: 7.5vh;
   }
 

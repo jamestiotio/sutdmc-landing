@@ -58,6 +58,10 @@ const Defaults = createGlobalStyle`
         cursor: none;
       }
     }
+
+    li {
+      list-style-type: none;
+    }
 `;
 
 export default Defaults;

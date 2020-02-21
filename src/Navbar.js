@@ -21,9 +21,6 @@ const Navbar = styled.ul`
   font-size: 2.5rem;
   color: var(--color-text);
 
-  & > li {
-  }
-
   & > li > a {
     height: 100%;
     padding-top: 5%;
@@ -31,8 +28,7 @@ const Navbar = styled.ul`
     padding-left: 15%;
     padding-right: 15%;
     &:hover {
-      background-color: var(--color-accent);
-      color: var(--color-background);
+      color: var(--color-accent);
     }
 
     &::selection {
@@ -45,7 +41,7 @@ const Navbar = styled.ul`
     width: 100vw;
     margin: 0;
     font-size: 16px;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 `;
 

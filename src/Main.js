@@ -23,10 +23,12 @@ const Main = styled.main`
     padding: 20px 15%;
     height: auto;
     flex-direction: column;
+    margin-top: 0px;
+    min-height: calc(100vh - 60px);
+    justify-content: space-evenly;
   }
 
   @media (max-width: 576px) {
-    height: auto;
     padding: 0 20px;
   }
 `;
