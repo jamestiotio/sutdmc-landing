@@ -2,6 +2,7 @@ import React from "react";
 
 import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";
+import SubHeader from "../components/SubHeader";
 import Text from "../components/Text";
 import CTA from "../components/CTA";
 
@@ -14,8 +15,12 @@ const HomeComp = () => {
         student-hosted Minecraft server. If you're up for a challenge, come find
         treasures hidden across the map and win real life prizes!
       </Text>
-      <Text> Server Opens 22 Feb 10am. Come back for updates!</Text>
-      <CTA href="https://sutdmc-map.opensutd.org/">Live Preview</CTA>
+      <SubHeader>Server is open!</SubHeader>
+      <Text>
+        Server Address: <b>game.sutdmc.opensutd.org</b>
+        <br></br>Game version: Java Edition 1.14.1
+      </Text>
+      <CTA href="https://sutdmc-map.opensutd.org/">Live 3D Maps</CTA>
     </PageBase>
   );
 };
