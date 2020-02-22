@@ -18,7 +18,7 @@ const TreasureComp = () => {
       </Text>
       <Text>
         Prizes are served on a first-come first-serve basis. Prizes are reset
-        8am each day. Participants must be residing in Singapore to be able to
+        10am each day. Participants must be residing in Singapore to be able to
         come down to campus on a later date to collect the physical prize from
         us.
       </Text>
