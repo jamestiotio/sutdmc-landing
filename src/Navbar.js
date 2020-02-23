@@ -3,12 +3,7 @@ import styled from "styled-components";
 
 import Link from "./components/Link";
 
-const NavLink = styled(Link)`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+const NavLink = styled(Link)``;
 
 const Navbar = styled.ul`
   width: 50vw;
@@ -20,9 +15,13 @@ const Navbar = styled.ul`
   font-family: var(--font-primary);
   font-size: 2.5rem;
   color: var(--color-text);
-
-  & > li > a {
+  & > li {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & > li > a {
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 15%;
@@ -65,6 +64,9 @@ function NavbarComp() {
         </li>
         <li>
           <NavLink to="/treasure">Treasure!</NavLink>
+        </li>
+        <li>
+          <a href="https://opensutd.org/minecraft-gallery/">Gallery</a>
         </li>
         <li>
           <NavLink to="/elsewhere">Elsewhere</NavLink>
