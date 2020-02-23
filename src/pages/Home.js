@@ -20,7 +20,7 @@ const HomeComp = () => {
       </SubHeader>
       <Text>
         Server Address: <b>game.sutdmc.opensutd.org</b>
-        <br></br>Game version: Java Edition 1.14.1
+        <br></br>Game version: Java Edition 1.14.4
       </Text>
       <CTA href="https://sutdmc-map.opensutd.org/">Live 3D Maps</CTA>
     </PageBase>
