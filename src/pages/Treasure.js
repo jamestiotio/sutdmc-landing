@@ -22,6 +22,9 @@ const TreasureComp = () => {
         come down to campus on a later date to collect the physical prize from
         us.
       </Text>
+      <SubHeader>
+        Prizes have been claimed as of 24 Feb! Thank you for playing!
+      </SubHeader>
     </PageBase>
   );
 };
