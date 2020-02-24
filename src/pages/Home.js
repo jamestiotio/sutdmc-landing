@@ -15,12 +15,18 @@ const HomeComp = () => {
         student-hosted Minecraft server. If you're up for a challenge, come find
         treasures hidden across the map and win real life prizes!
       </Text>
-      <SubHeader>
-        Server is open to public from 10am to 6pm SGT, 22 Feb and 23 Feb.
-      </SubHeader>
+      <SubHeader>Open House has concluded!</SubHeader>
       <Text>
-        Server Address: <b>game.sutdmc.opensutd.org</b>
-        <br></br>Game version: Java Edition 1.14.4
+        Thank you for visting us on the 22nd and 23rd of Feb. We'll be back
+        soon!<br></br>
+        Check out the{" "}
+        <a
+          href="https://opensutd.org/minecraft-gallery"
+          style={{ textDecoration: "underline dotted" }}
+        >
+          gallery
+        </a>{" "}
+        and follow @sutdsg for updates!
       </Text>
       <CTA href="https://sutdmc-map.opensutd.org/">Live 3D Maps</CTA>
     </PageBase>
