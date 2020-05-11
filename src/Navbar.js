@@ -63,9 +63,6 @@ function NavbarComp() {
           <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <NavLink to="/treasure">Treasure!</NavLink>
-        </li>
-        <li>
           <a href="https://opensutd.org/minecraft-gallery/">Gallery</a>
         </li>
         <li>

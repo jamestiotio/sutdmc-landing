@@ -4,7 +4,6 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Treasure from "./pages/Treasure";
 import Elsewhere from "./pages/Elsewhere";
 import Error from "./pages/Error";
 
@@ -34,9 +33,6 @@ const ContentComp = () => {
         </Route>
         <Route exact path="/about">
           <About />
-        </Route>
-        <Route exact path="/treasure">
-          <Treasure />
         </Route>
         <Route exact path="/elsewhere">
           <Elsewhere />
