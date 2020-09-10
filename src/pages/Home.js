@@ -20,7 +20,8 @@ const HomeComp = () => {
         Java Edition 1.15.2
         <br></br>
         When entering the server, please use the portal on the left to teleport to the Open House world.
-        <br></br>
+      </Text>
+      <Text>
         Found some posters around school with info about treasures? Head into the Open House world and start searching! There are chests hidden around the in-game counterpart of where you spotted the posters.
         <br></br>
         If you have found a chest, follow the instructions written in the in-game book to redeem your prize. Stand to win Starbucks vouchers, and special prizes for the first 3 winners.
