@@ -19,7 +19,7 @@ const HomeComp = () => {
         <br></br>
         Java Edition 1.15.2
         <br></br>
-        When entering the server, please use the portal on the left to teleport to the Open House world.
+        When entering the server, please use the portal on the right to teleport to the Open House world.
       </Text>
       <Text>
         Found some posters around school with info about treasures? Head into the Open House world and start searching! There are chests hidden around the in-game counterpart of where you spotted the posters.
