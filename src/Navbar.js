@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 
 import Link from "./components/Link";
-import block from './assets/images/block.png';
+import menu from './assets/images/menu.png';
 
 const NavLink = styled(Link)``;
 
@@ -221,7 +221,7 @@ function NavbarComp() {
       :
         <Navbar>{navList}</Navbar>
       }
-      <Hamburger src={block} alt="" width="30" height="30" onClick={expandNav}></Hamburger>
+      <Hamburger src={menu} alt="" width="30" height="30" onClick={expandNav}></Hamburger>
     </NavElement>
   );
 }
