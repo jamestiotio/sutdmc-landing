@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Link from "./components/Link";
 import menu from './assets/images/menu.png';
+import HeroImage from "./HeroImage";
 
 const NavLink = styled(Link)``;
 
@@ -148,7 +149,7 @@ const Hamburger = styled.img`
   }
 `
 
-function NavbarComp() {
+const NavbarComp = ({ blockCount, setBlockCount }) => {
   const [isOpened, setIsOpened] = useState(false);
 
   function expandNav() {
@@ -249,6 +250,7 @@ function NavbarComp() {
 
   return (
     <NavElement>
+      <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} />
       {isOpened ?
         <Navbar><NavExpanded onClick={closeNav}>{navList}</NavExpanded></Navbar>
       :

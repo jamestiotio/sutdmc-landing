@@ -27,7 +27,7 @@ function App() {
           <Counter blockCount={blockCount} />
         ) : null}
         <Div100vh>
-          <Navbar />
+          <Navbar blockCount={blockCount} setBlockCount={setBlockCount}/>
           <Main blockCount={blockCount} setBlockCount={setBlockCount} />
         </Div100vh>
       </MiningContext.Provider>

@@ -11,27 +11,43 @@ const HeroImage = styled.div`
   align-items: center;
   flex-shrink: 0;
 
-  width: 440px;
-  height: 540px;
+  // width: 440px;
+  // height: 540px;
 
-  @media (max-width: 1200px) {
-    width: 340px;
-    height: 440px;
-  }
+  // @media (max-width: 1200px) {
+  //   width: 340px;
+  //   height: 440px;
+  // }
 
-  @media (max-width: 1008px) {
-    width: calc(35vh * 0.8);
-    height: 35vh;
-  }
+  // @media (max-width: 1008px) {
+  //   width: calc(35vh * 0.8);
+  //   height: 35vh;
+  // }
+
+  // @media (max-width: 896px) {
+  //   width: calc(30vh * 0.8);
+  //   height: 30vh;
+  // }
+
+  // @media (max-width: 576px) {
+  //   width: calc(25vh * 0.8);
+  //   height: 25vh;
+  // }
+
+  //------------------navbar version--------------
+  margin-left: 32px;
+  width: 72px;
+  height: 90px;
 
   @media (max-width: 896px) {
-    width: calc(30vh * 0.8);
-    height: 30vh;
+    margin-left: 0;
+    width: calc(15vh * 0.8);
+    height: 15vh;
   }
 
   @media (max-width: 576px) {
-    width: calc(25vh * 0.8);
-    height: 25vh;
+    width: calc(10vh * 0.8);
+    height: 10vh;
   }
 `;
 

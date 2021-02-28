@@ -9,8 +9,8 @@ import Error from "./pages/Error";
 
 const Content = styled.div`
   max-height: 100%;
-  overflow-y: auto;
-  margin-left: 150px;
+  //overflow-y: auto;
+  //margin-left: 150px;
 
   @media (max-width: 1200px) {
     margin-left: 100px;
