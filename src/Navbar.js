@@ -172,14 +172,27 @@ function NavbarComp() {
     <li><NavLink to="/project3">Project&nbsp;3</NavLink></li>
   </ul>)
 
+  const navDropdownEvents = (<ul>
+    <li><NavLink to="/oh2021">Open House 2021</NavLink></li>
+    <li><NavLink to="/">Archives</NavLink></li>
+  </ul>)
+
+  const navDropdownArchives = (<ul>
+    <li><NavLink to="/oh2020">Open House 2020</NavLink></li>
+    <li><NavLink to="/asd2020">ASD Projects</NavLink></li>
+  </ul>);
+
   const navList = (<>
     <li>
       <NavLink to="/">Home</NavLink>
     </li>
     <li>
-      <NavLink to="/about">About</NavLink>
+      <NavLink to="/campus">Campus</NavLink>
     </li>
-    {isOpened ?
+    {/* <li>
+      <NavLink to="/about">About Us</NavLink>
+    </li> */}
+    {/* {isOpened ?
       <>
         <li><NavLink to="/games">Games</NavLink></li>
         <div style={{marginLeft: "35px"}}>
@@ -205,9 +218,29 @@ function NavbarComp() {
           </NavDropdownContent>
         </NavDropdown>
       </>
+    } */}
+
+    {isOpened ? 
+    <>
+      <NavLink to="/">Events</NavLink>
+      <div style={{marginLeft: "35px"}}>
+        {navDropdownEvents}
+      </div>
+    </> :
+    <>
+      <NavDropdown>
+        <NavLink to="/">Events</NavLink>
+        <NavDropdownContent>
+          {navDropdownEvents}
+        </NavDropdownContent>
+      </NavDropdown>
+    </> 
     }
-    <li>
+    {/* <li>
       <a href="https://opensutd.org/minecraft-gallery/">Gallery</a>
+    </li> */}
+    <li>
+      <NavLink to="/about">About Us</NavLink>
     </li>
     <li>
       <NavLink to="/elsewhere">Elsewhere</NavLink>
