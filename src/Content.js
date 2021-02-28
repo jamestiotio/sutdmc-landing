@@ -6,9 +6,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Elsewhere from "./pages/Elsewhere";
 import Error from "./pages/Error";
+import ASDProjects from './pages/ASDProjects';
 
 const Content = styled.div`
   max-height: 100%;
+  width: 100%;
   //overflow-y: auto;
   //margin-left: 150px;
 
@@ -36,6 +38,9 @@ const ContentComp = () => {
         </Route>
         <Route exact path="/elsewhere">
           <Elsewhere />
+        </Route>
+        <Route exact path="/asd2020">
+          <ASDProjects />
         </Route>
         <Route path="*">
           <Error />

@@ -46,7 +46,7 @@ const HomeComp = () => {
         <CTAbtn selectUserType={selectUserType}>I don't play minecraft</CTAbtn>
       </BtnGroup>
       {userType === 'minecraft' ?
-      <React.Fragment>
+      <>
         <Text>
         Take a tour of a blocky and virtual rendition of SUTD in a
         student-hosted Minecraft server. Virtual Open Campus is open day or night, rain or shine!
@@ -64,7 +64,7 @@ const HomeComp = () => {
           If you have found a chest, follow the instructions written in the in-game book to redeem your prize. Stand to win Starbucks vouchers, and special prizes for the first 3 winners.
         </Text>
         <CTA href="https://sutdmc-map.opensutd.org/open_house">Live 3D Maps (View in Browser)</CTA>
-      </React.Fragment> :
+      </> :
       <Text>Non minecraft player</Text>
       }
       
