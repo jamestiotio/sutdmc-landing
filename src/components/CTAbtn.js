@@ -19,6 +19,7 @@ const CTAbtn = styled.button`
   padding: 0.5rem;
   text-transform: uppercase;
   width: auto;
+  outline: none;
 
   &:focus,
   &:hover {
