@@ -26,8 +26,6 @@ const BtnGroup = styled.div`
 `;
 
 const HomeComp = () => {
-  let userHadSession = false;
-  //let userType; //a string, either 'minecraft' or 'nonMinecraft'
   const [userType, setUserType] = useState('minecraft');
 
   const selectUserType = e => {
