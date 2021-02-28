@@ -19,6 +19,11 @@ const HeroImage = styled.div`
     height: 440px;
   }
 
+  @media (max-width: 1008px) {
+    width: calc(35vh * 0.8);
+    height: 35vh;
+  }
+
   @media (max-width: 896px) {
     width: calc(30vh * 0.8);
     height: 30vh;
