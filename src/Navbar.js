@@ -118,7 +118,7 @@ const NavDropdownContent = styled.div`
 `;
 const NavDropdownContent2 = styled.div`
   ${NavDropdownContentDiv}
-  top: 25px;
+  top: 30px;
 `;
 
 const NavDropdown = styled.li`
@@ -181,19 +181,28 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
   const [isOpened, setIsOpened] = useState(false);
 
   function expandNav() {
-    setIsOpened(isOpened => !isOpened);
-  }
-
-  function closeNav() {
-    setIsOpened(false);
+    if (!isOpened) { setIsOpened(true) }
   }
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    function resize() {
       const minWidth = window.innerWidth > 896;
-      console.log(window.innerWidth);
       if (minWidth && isOpened) setIsOpened(false);
-    }, false);
+    }
+
+    function click() {
+      if (isOpened) { setIsOpened(false) }
+
+    }
+    if (isOpened) {
+      window.addEventListener("resize", resize);
+      document.addEventListener("click", click);
+    }
+
+    return () => {
+      window.removeEventListener("resize", resize);
+      document.removeEventListener("click", click);
+    };
   }, [isOpened]);
 
   const navDropdownGames = (<ul>
@@ -230,36 +239,6 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
     <li>
       <NavLink to="/campus">Campus</NavLink>
     </li>
-    {/* <li>
-      <NavLink to="/about">About Us</NavLink>
-    </li> */}
-    {/* {isOpened ?
-      <>
-        <li><NavLink to="/games">Games</NavLink></li>
-        <div style={{marginLeft: "35px"}}>
-          {navDropdownGames}
-        </div>
-        <li><NavLink to="/projects">Projects</NavLink></li>
-        <div style={{marginLeft: "35px"}}>
-          {navDropdownProjects}
-        </div>
-      </>
-    :
-      <>
-        <NavDropdown>
-          <NavLink to="/games">Games</NavLink>
-          <NavDropdownContent>
-            {navDropdownGames}
-          </NavDropdownContent>
-        </NavDropdown>
-        <NavDropdown>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavDropdownContent>
-            {navDropdownProjects}
-          </NavDropdownContent>
-        </NavDropdown>
-      </>
-    } */}
 
     {isOpened ?
     <>
@@ -295,7 +274,7 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
     <NavElement>
       <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} />
       {isOpened ?
-        <Navbar><NavExpanded onClick={closeNav}>{navList}</NavExpanded></Navbar>
+        <Navbar><NavExpanded>{navList}</NavExpanded></Navbar>
       :
         <Navbar>{navList}</Navbar>
       }
