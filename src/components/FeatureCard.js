@@ -30,6 +30,7 @@ const FeatureCardTitle = styled.p`
 `;
 
 const FeatureCardDescription = styled.p`
+    font-size: 18px;
     transform: translateY(150px);
     opacity: 0;
     transition: all .5s;
