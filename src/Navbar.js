@@ -10,7 +10,6 @@ const NavLink = styled(Link)``;
 const Navbar = styled.ul`
   width: 50vw;
   margin-left: 45vw;
-  margin-top: 15px;
   height: 45px;
   display: flex;
   list-style: none;
@@ -51,10 +50,9 @@ const Navbar = styled.ul`
   }
 
   @media (max-width: 896px) {
-    width: 70%;
     margin-left: 0;
+    padding-left: 10%;
     padding-right: 10%;
-    margin-top: 15px;
     flex: 1;
     font-size: 16px;
     justify-content: space-between;
@@ -76,17 +74,29 @@ const NavElement = styled.nav`
   }
 `;
 
-const NavDropdownContent = styled.div`
+const NavDropdownContentDiv = `
   display: none;
   position: absolute;
   background-color: #fff;
   z-index: 1;
+  left: 0;
   top: 45px;
   min-width: 100%;
 
-  & li {
+  & > ul > li {
     height: 30px;
-    padding: 0 5px;
+    padding: 0 10px;
+    color: black;
+    display: block;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  & > ul > li > div > ul > li {
+    height: 30px;
+    padding: 0 5px 0 15px;
     color: black;
     display: block;
 
@@ -103,11 +113,27 @@ const NavDropdownContent = styled.div`
   }
 `;
 
+const NavDropdownContent = styled.div`
+  ${NavDropdownContentDiv}
+`;
+const NavDropdownContent2 = styled.div`
+  ${NavDropdownContentDiv}
+  top: 25px;
+`;
+
 const NavDropdown = styled.li`
   position: relative;
 
   @media (min-width: 897px) {
     &:hover ${NavDropdownContent} {display: block;}
+  }
+`;
+
+const NavDropdown2 = styled.li`
+  position: relative;
+
+  @media (min-width: 897px) {
+    &:hover ${NavDropdownContent2} {display: block;}
   }
 `;
 
@@ -120,8 +146,11 @@ const NavExpanded = styled.div`
   background-image: linear-gradient(#333, #333);
   background-color: #000;
 
-  & li {
+  & > li {
     margin-left: 10px;
+  }
+
+  & li {
     height: 45px;
     display: flex;
     align-items: center;
@@ -144,7 +173,6 @@ const Hamburger = styled.img`
     display: flex;
     justify-content: center;
     align-self: center;
-    margin-top: 15px;
     z-index: 2;
   }
 `
@@ -157,8 +185,7 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
   }
 
   function closeNav() {
-    console.log("here")
-    setIsOpened(isOpened => !isOpened);
+    setIsOpened(isOpened => false);
   }
 
   const navDropdownGames = (<ul>
@@ -173,15 +200,20 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
     <li><NavLink to="/project3">Project&nbsp;3</NavLink></li>
   </ul>)
 
-  const navDropdownEvents = (<ul>
-    <li><NavLink to="/oh2021">Open House 2021</NavLink></li>
-    <li><NavLink to="/">Archives</NavLink></li>
-  </ul>)
-
   const navDropdownArchives = (<ul>
-    <li><NavLink to="/oh2020">Open House 2020</NavLink></li>
+    <li><NavLink to="/oh2020">Open&nbsp;House&nbsp;2020</NavLink></li>
     <li><NavLink to="/asd2020">ASD Projects</NavLink></li>
   </ul>);
+
+  const navDropdownEvents = (<ul>
+    <li><NavLink to="/oh2021">Open&nbsp;House&nbsp;2021</NavLink></li>
+    <NavDropdown2>
+      <li><NavLink to="/">Archives</NavLink></li>
+      <NavDropdownContent2>
+        {navDropdownArchives}
+      </NavDropdownContent2>
+    </NavDropdown2>
+  </ul>)
 
   const navList = (<>
     <li>
@@ -221,11 +253,14 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
       </>
     } */}
 
-    {isOpened ? 
+    {isOpened ?
     <>
-      <NavLink to="/">Events</NavLink>
-      <div style={{marginLeft: "35px"}}>
+      <li><NavLink to="/">Events</NavLink></li>
+      <div style={{marginLeft: "25px"}}>
         {navDropdownEvents}
+      </div>
+      <div style={{marginLeft: "50px"}}>
+        {navDropdownArchives}
       </div>
     </> :
     <>
@@ -235,7 +270,7 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
           {navDropdownEvents}
         </NavDropdownContent>
       </NavDropdown>
-    </> 
+    </>
     }
     {/* <li>
       <a href="https://opensutd.org/minecraft-gallery/">Gallery</a>

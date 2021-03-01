@@ -41,13 +41,9 @@ const HeroImage = styled.div`
 
   @media (max-width: 896px) {
     margin-left: 0;
-    width: calc(15vh * 0.8);
-    height: 15vh;
-  }
-
-  @media (max-width: 576px) {
-    width: calc(10vh * 0.8);
-    height: 10vh;
+    padding-top: 3px;
+    width: 35px;
+    height: 42px;
   }
 `;
 
