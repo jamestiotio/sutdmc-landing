@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 
 import Link from "./components/Link";
@@ -51,10 +51,10 @@ const Navbar = styled.ul`
 
   @media (max-width: 896px) {
     margin-left: 0;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     flex: 1;
-    font-size: 16px;
+    font-size: 20px;
     justify-content: space-between;
 
     & > li:nth-last-child(-n+2) {
@@ -185,8 +185,16 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
   }
 
   function closeNav() {
-    setIsOpened(isOpened => false);
+    setIsOpened(false);
   }
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      const minWidth = window.innerWidth > 896;
+      console.log(window.innerWidth);
+      if (minWidth && isOpened) setIsOpened(false);
+    }, false);
+  }, [isOpened]);
 
   const navDropdownGames = (<ul>
     <li><NavLink to="/epd">EPD</NavLink></li>
@@ -208,7 +216,7 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
   const navDropdownEvents = (<ul>
     <li><NavLink to="/oh2021">Open&nbsp;House&nbsp;2021</NavLink></li>
     <NavDropdown2>
-      <li><NavLink to="/">Archives</NavLink></li>
+      <NavLink to="/">Archives</NavLink>
       <NavDropdownContent2>
         {navDropdownArchives}
       </NavDropdownContent2>
@@ -276,7 +284,7 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
       <a href="https://opensutd.org/minecraft-gallery/">Gallery</a>
     </li> */}
     <li>
-      <NavLink to="/about">About Us</NavLink>
+      <NavLink to="/about">About&nbsp;Us</NavLink>
     </li>
     <li>
       <NavLink to="/elsewhere">Elsewhere</NavLink>
