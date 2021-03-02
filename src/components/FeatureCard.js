@@ -11,6 +11,7 @@ const FeatureCard = styled.div`
     border: 1px solid var(--color-background);
     border-radius: 10px;
     position: relative;
+    background-image: url('../src/assets/images/asd-landing/Jurong Town Hall.png');
 
     &:hover > .feature-card__description {
         transform: translateY(0);

@@ -19,7 +19,7 @@ const featureCardDetails = {
     jth: {
        title: 'Jurong Town Hall',
        href: '/asd2020/jurong_town_hall',
-       imgSource: '',
+       imgSource: '../assets/images/asd-landing/Jurong Town Hall.png',
        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?'
     },
     theatre: {
