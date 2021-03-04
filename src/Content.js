@@ -10,6 +10,7 @@ import ASDProjects from './pages/ASDProjects';
 import ASDProjectPage from './pages/ASDProjectPage';
 import GamePage from './pages/GamePage';
 import OH2021 from './pages/OH2021';
+import ComingSoon from './pages/ComingSoon';
 
 const Content = styled.div`
   max-height: 100%;
@@ -34,13 +35,16 @@ const ContentComp = () => {
     <Content>
       <Switch>
         <Route exact path="/">
-          <Home />
+          {/* <Home /> */}
+          <OH2021 />
         </Route>
         <Route exact path="/about">
-          <About />
+          {/* <About /> */}
+          <ComingSoon/>
         </Route>
         <Route exact path="/elsewhere">
-          <Elsewhere />
+          {/* <Elsewhere /> */}
+          <ComingSoon/>
         </Route>
         <Route exact path="/oh2021">
           <OH2021 />
@@ -49,10 +53,12 @@ const ContentComp = () => {
           <GamePage />
         </Route>
         <Route exact path="/asd2020">
-          <ASDProjects />
+          {/* <ASDProjects /> */}
+          <ComingSoon/>
         </Route>
         <Route exact path="/asd2020/:id">
-          <ASDProjectPage />
+          {/* <ASDProjectPage /> */}
+          <ComingSoon/>
         </Route>
         <Route path="*">
           <Error />
