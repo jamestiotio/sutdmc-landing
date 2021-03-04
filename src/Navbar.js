@@ -12,6 +12,7 @@ const Navbar = styled.ul`
   margin-left: 45vw;
   height: 45px;
   display: flex;
+  align-self: center;
   list-style: none;
   justify-content: space-evenly;
   font-family: var(--font-primary);
@@ -23,6 +24,7 @@ const Navbar = styled.ul`
     justify-content: center;
     align-items: center;
   }
+
   & a {
     width: 100%;
     height: 100%;
@@ -87,7 +89,8 @@ const NavDropdownContentDiv = `
     height: 30px;
     padding: 0 10px;
     color: black;
-    display: block;
+    display: flex;
+    align-items: center;
 
     &:hover {
       color: var(--color-accent);
@@ -205,18 +208,6 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
     };
   }, [isOpened]);
 
-  const navDropdownGames = (<ul>
-    <li><NavLink to="/epd">EPD</NavLink></li>
-    <li><NavLink to="/esd">ESD</NavLink></li>
-    <li><NavLink to="/istd">ISTD</NavLink></li>
-  </ul>)
-
-  const navDropdownProjects = (<ul>
-    <li><NavLink to="/project1">Project&nbsp;1</NavLink></li>
-    <li><NavLink to="/project2">Project&nbsp;2</NavLink></li>
-    <li><NavLink to="/project3">Project&nbsp;3</NavLink></li>
-  </ul>)
-
   const navDropdownArchives = (<ul>
     <li><NavLink to="/oh2020">Open&nbsp;House&nbsp;2020</NavLink></li>
     <li><NavLink to="/asd2020">ASD Projects</NavLink></li>
@@ -225,7 +216,7 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
   const navDropdownEvents = (<ul>
     <li><NavLink to="/oh2021">Open&nbsp;House&nbsp;2021</NavLink></li>
     <NavDropdown2>
-      <NavLink to="/">Archives</NavLink>
+      <div>Archives</div>
       <NavDropdownContent2>
         {navDropdownArchives}
       </NavDropdownContent2>
