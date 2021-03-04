@@ -9,7 +9,6 @@ const NavLink = styled(Link)``;
 
 const Navbar = styled.ul`
   width: 50vw;
-  margin-left: 45vw;
   height: 45px;
   display: flex;
   align-self: center;
@@ -68,6 +67,8 @@ const Navbar = styled.ul`
 const NavElement = styled.nav`
   padding-top: 5vh;
   display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 
   @media (max-width: 896px) {
     padding-top: 0;
@@ -262,7 +263,7 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
   </>)
 
   const Logo = styled.img`
-    margin-left: 32px;
+    margin-left: 44px;
     width: 72px;
     height: 72px;
 
@@ -274,10 +275,27 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
     }
   `;
 
+  const Title = styled.h1`
+    font-family: var(--font-primary);
+    color: var(--color-accent);
+    font-size: 48px;
+    line-height: 1.4;
+    margin-left: 25px;
+  `;
+
+  const NavBrand = styled.div`
+    display: flex;
+    width: 35vw;
+    align-items: center;
+  `;
+
   return (
     <NavElement>
       {/* <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} /> */}
-      <Logo src={require('./assets/images/site-logo.png')}></Logo>
+      <NavBrand>
+        <Logo src={require('./assets/images/site-logo.png')}></Logo>
+        <Title>SUTD Minecraft</Title>
+      </NavBrand>
       {isOpened ?
         <Navbar><NavExpanded>{navList}</NavExpanded></Navbar>
       :
