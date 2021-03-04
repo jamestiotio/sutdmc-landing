@@ -11,21 +11,21 @@ import CTA from '../components/CTA';
 const gameCardDetails = {
     jth: {
        title: 'Treasure Hunt',
-       href: '/',
-       imgSource: '',
-       description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?'
+       href: '',
+       imgSource: require('../assets/images/oh2021-games/treasure_hunt.png'),
+       description: 'Slow day? Explore every nook and cranny of our school to find treasure chests.'
     },
     theatre: {
         title: 'Redstone Gauntlet',
-        href: '/',
-        imgSource: '',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?' 
+        href: '',
+        imgSource: require('../assets/images/oh2021-games/redstone_rush.png'),
+        description: 'Test your Boolean logic as fast as possible in our ISTD inspired game and complete the gauntlet!' 
     },
     gallery: {
-        title: 'ESD Game',
-        href: '/',
-        imgSource: '',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?' 
+        title: 'Speed Bakers',
+        href: '',
+        imgSource: require('../assets/images/oh2021-games/speed_bakers.png'),
+        description: 'Optimise your very own cake supply chain in our ESD inspired game!' 
     }
 };
 
@@ -35,7 +35,7 @@ const ASDBtnStyles = {
 };
 
 const sectionHeaders = {
-    'margin': '30px auto',
+    'margin': '20px auto',
 }
 
 const OH2021Comp = () => {
@@ -44,6 +44,7 @@ const OH2021Comp = () => {
             <PageHeader>Open House 2021</PageHeader>
             <PageBanner></PageBanner>
             <Text style={sectionHeaders}>Games</Text>
+            <Text style={sectionHeaders}>Starbuck, GV and Gong Cha vouchers to be won, first come first serve!</Text>
             <FeatureCardSection cardDetails={gameCardDetails}></FeatureCardSection>
             <Text style={sectionHeaders}>View our ASD Projects</Text>
             <CTA href="/asd2020" style={ASDBtnStyles}>ASD Projects</CTA>

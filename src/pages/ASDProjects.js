@@ -19,22 +19,24 @@ const featureCardDetails = {
     jth: {
        title: 'Jurong Town Hall',
        href: '/asd2020/jurong_town_hall',
-       imgSource: '../assets/images/asd-landing/Jurong Town Hall.png',
+       imgSource: require('../assets/images/asd-landing/Jurong Town Hall.png'),
        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?'
     },
     theatre: {
         title: 'Theatre',
         href: '/asd2020/theatre',
-        imgSource: '',
+        imgSource: require('../assets/images/asd-landing/National Theatre.png'),
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?' 
     },
     gallery: {
-        title: 'Gallery',
-        href: '/asd2020/gallery',
-        imgSource: '',
+        title: 'National Design Centre',
+        href: '/asd2020/design_centre',
+        imgSource: require('../assets/images/asd-landing/National Design Centre.png'),
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?' 
     }
 };
+
+
 
 const ASDProjectsComp = () => {
     return (

@@ -56,8 +56,8 @@ const projectDetails = {
         architectPhoto: '',
         content: sampleMarkup
     },
-    'gallery': {
-        title: 'National Gallery',
+    'design_centre': {
+        title: 'National Design Centre',
         architectPhoto: '',
         content: sampleMarkup
     },

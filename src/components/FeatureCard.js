@@ -1,25 +1,34 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
 const FeatureCard = styled.div`
     height: 40vh;
-    margin: 0 10px;
-    padding: 10px;
+    margin: 0;
     color: var(--color-text);
     font-family: var(--font-primary);
-    background-color: var(--color-accent);
-    border: 1px solid var(--color-background);
+    border: 3px solid var(--color-accent);
     border-radius: 10px;
     position: relative;
-    background-image: url('../src/assets/images/asd-landing/Jurong Town Hall.png');
+    overflow: hidden;
 
-    &:hover > .feature-card__description {
-        transform: translateY(0);
-        opacity: 1;
+    &:hover {
+        .feature-card__description {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        & > .feature-card__overlay {
+            opacity: 1;
+        }
     }
 `;
 
-const FeatureCardImage = styled.img``;
+const FeatureCardImage = styled.img`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.3);
+`;
 
 const FeatureCardTitle = styled.p`
     text-transform: uppercase;
@@ -30,10 +39,18 @@ const FeatureCardTitle = styled.p`
     font-size: 20px;
 `;
 
+const FeatureCardOverlay = styled.div`
+    height: 100%;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity .2s;
+`;
+
 const FeatureCardDescription = styled.p`
     font-size: 18px;
     transform: translateY(150px);
     opacity: 0;
+    text-align: center;
     transition: all .5s;
 `;
 
@@ -44,12 +61,16 @@ const FeatureCardComp = React.forwardRef(({ href, imgSource, title, description,
             window.location.href = href; //to find a way to use react router instead?
         }
     }
-    
+
     return (
         <FeatureCard ref={ref} {...others} onClick={handleClick()}>
             <FeatureCardImage src={imgSource} alt="card image"/>
             <FeatureCardTitle>{title}</FeatureCardTitle>
-            <FeatureCardDescription className="feature-card__description">{description}</FeatureCardDescription>
+            <FeatureCardOverlay className="feature-card__overlay">
+                <FeatureCardDescription className="feature-card__description">
+                    {description}
+                </FeatureCardDescription>
+            </FeatureCardOverlay>
         </FeatureCard>
     );
 });
