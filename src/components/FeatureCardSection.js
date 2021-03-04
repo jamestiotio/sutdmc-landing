@@ -4,9 +4,14 @@ import styled from 'styled-components';
 import FeatureCard from './FeatureCard';
 
 const FeatureCardSection = styled.div`
+    margin-top: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+
+    @media (max-width: 896px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 const FeatureCardSectionComp = React.forwardRef(({ cardDetails, children, ...others }, ref) => {

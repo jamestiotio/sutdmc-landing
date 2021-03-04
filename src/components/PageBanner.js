@@ -5,6 +5,10 @@ const PageBanner = styled.div`
     display: flex;
     height: 40vh;
     justify-content: space-around;
+
+    @media (max-width: 896px) {
+        flex-direction: column;
+    }
 `;
 
 const PageBannerImg = styled.img`
@@ -60,5 +64,5 @@ const PageBannerComp = React.forwardRef(({ imgSource, children, ...others }, ref
       </PageBanner>
     );
   });
-  
-export default PageBannerComp; 
+
+export default PageBannerComp;

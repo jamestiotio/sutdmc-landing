@@ -21,6 +21,10 @@ const FeatureCard = styled.div`
             opacity: 1;
         }
     }
+
+    @media (max-width: 896px) {
+        margin: 10px 10px;
+    }
 `;
 
 const FeatureCardImage = styled.img`
@@ -55,7 +59,7 @@ const FeatureCardDescription = styled.p`
 `;
 
 const FeatureCardComp = React.forwardRef(({ href, imgSource, title, description, children, ...others }, ref) => {
-    
+
     const handleClick = () => {
         return e => {
             window.location.href = href; //to find a way to use react router instead?
