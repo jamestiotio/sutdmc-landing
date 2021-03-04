@@ -41,7 +41,7 @@ const sectionHeaders = {
 const bannerText = (
     <>
         <h1>Minecraft Open House 2021</h1>
-        <h3>Discover a better world by design Minecraft!</h3>
+        <h3>Discover a better world by <span style={{textDecoration: 'line-through'}}>design</span> Minecraft!</h3>
         <h3>Come discover what the SUTD life is like by visiting our campus in-game, interacting with our students and playing competitive games modelled after our academic programmes.</h3>
         <h3>Join us in game or tune in to our livestream on 6th of March!</h3>
     </>

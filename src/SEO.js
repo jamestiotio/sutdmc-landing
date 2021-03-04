@@ -21,6 +21,30 @@ const SEO = () => {
     case "elsewhere/":
       currentPage = "elsewhere";
       break;
+    case "oh2021":
+      currentPage = "Open House 2021";
+      break;
+    case "oh2021/":
+      currentPage = "Open House 2021";
+      break;
+    case "oh2021/treasure_hunt":
+      currentPage = "Treasure Hunt";
+      break;
+    case "oh2021/treasure_hunt/":
+      currentPage = "Treasure Hunt";
+      break;
+    case "oh2021/redstone_rush":
+      currentPage = "Redstone Rush";
+      break;
+    case "oh2021/redstone_rush/":
+      currentPage = "Redstone Rush";
+      break;
+    case "oh2021/speed_bakers":
+      currentPage = "Speed Bakers";
+      break;
+    case "oh2021/speed_bakers/":
+      currentPage = "Speed Bakers";
+      break;
     default:
       currentPage = "404";
   }
@@ -31,7 +55,7 @@ const SEO = () => {
       : "SUTDLAND - SUTD In Minecraft",
     description = `A blocky and virtual rendition of SUTD in a student-hosted Minecraft server!`,
     image =
-      "https://sutdmc.opensutd.org" + require("./assets/images/site-image.png"),
+      "https://sutdmc.opensutd.org" + require("./assets/images/site-logo.png"),
     sitename = "SUTDLAND - SUTD In Minecraft",
     url = currentPage
       ? currentPage === "404"

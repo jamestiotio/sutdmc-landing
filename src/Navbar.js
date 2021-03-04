@@ -270,9 +270,23 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
     </li>
   </>)
 
+  const Logo = styled.img`
+    margin-left: 32px;
+    width: 72px;
+    height: 72px;
+
+    @media (max-width: 896px) {
+      margin-left: 0;
+      padding-top: 3px;
+      width: 35px;
+      height: 35px;
+    }
+  `;
+
   return (
     <NavElement>
-      <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} />
+      {/* <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} /> */}
+      <Logo src={require('./assets/images/site-logo.png')}></Logo>
       {isOpened ?
         <Navbar><NavExpanded>{navList}</NavExpanded></Navbar>
       :
