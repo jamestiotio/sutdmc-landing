@@ -5,7 +5,7 @@ import PageBanner from "../components/PageBanner";
 import PageBase from "../components/PageBase";
 import CTAbtn from "../components/CTAbtn";
 import styled from "styled-components";
-import details from "../content/gen_img_path/details.json";
+import details from "../content/Gen_img_path/details.json";
 
 function Campus(props) {
   const location = []
