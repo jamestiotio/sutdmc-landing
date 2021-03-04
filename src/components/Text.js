@@ -7,6 +7,11 @@ const Text = styled.p`
   line-height: 1.4;
   color: var(--color-text);
 
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   & > span.colored {
     color: var(--color-accent);
 

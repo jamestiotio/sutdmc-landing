@@ -4,6 +4,8 @@ import styled from "styled-components";
 const SubHeader = styled.h2`
   font-family: var(--font-primary);
   font-size: 24px;
+  text-align: center;
+  margin: 40px auto 20px auto;
   color: var(--color-text);
   text-decoration: underline;
 

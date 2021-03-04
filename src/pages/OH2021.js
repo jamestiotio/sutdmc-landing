@@ -3,6 +3,7 @@ import React from 'react';
 import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";
 import PageBanner from '../components/PageBanner';
+import SubHeader from "../components/SubHeader";
 import Text from "../components/Text";
 import FeatureCardSection from '../components/FeatureCardSection';
 import CTA from '../components/CTA';
@@ -33,19 +34,29 @@ const ASDBtnStyles = {
     margin: '0 auto'
 };
 
-const sectionHeaders = {
-    'margin': '40px auto 20px auto',
-}
-
 const bannerText = (
     <>
-        <h1>Minecraft Open House 2021</h1>
-        <h3>Discover a better world by <span style={{textDecoration: 'line-through'}}>design</span> Minecraft!</h3>
-        <h3>Come discover what the SUTD life is like by visiting our campus in-game, interacting with our students and playing competitive games modelled after our academic programmes.</h3>
-        <h3>Join us in game or tune in to our livestream on 6th of March!</h3>
-        <h3>Java Edition 1.16.5</h3>
-        <h3>game.sutdmc.opensutd.org</h3>
-        <h3>Opening Hours: 2pm to 6pm daily from 5 March to 8 March </h3>
+        <h2>Discover a better world by <span style={{textDecoration: 'line-through'}}>design</span> Minecraft!</h2>
+        <p>Come discover what the SUTD life is like by visiting our campus in-game, interacting with our students and playing competitive games modelled after our academic programmes.
+        Join us in game or tune in to our livestream on 6th of March!</p>
+        <p style={{textAlign: 'center'}}>
+            <h3 style={{textDecoration: 'underline'}}>Connection Information</h3>
+            <h4>
+                <ul>
+                    <li>Java Edition 1.16.5</li>
+                    <li>game.sutdmc.opensutd.org</li>
+                </ul>
+            </h4>
+        </p>
+        <p style={{textAlign: 'center'}}>
+            <h3 style={{textDecoration: 'underline'}}>Opening Hours</h3>
+            <h4>
+                <ul>
+                    <li>Friday (5 Mar): 2pm to 6pm</li>
+                    <li>Sat ~ Mon (6 ~ 8 Mar): 9am to 6pm</li>
+                </ul>
+            </h4>
+        </p>
     </>
 )
 const sectionText = {
@@ -58,13 +69,15 @@ const OH2021Comp = () => {
         <PageBase>
             <PageHeader>Open House 2021</PageHeader>
             <PageBanner imgSource={require('../assets/images/oh2021/oh2021-main.png')}>
+                <Text>
                 {bannerText}
+                </Text>
             </PageBanner>
-            <Text style={sectionHeaders}>Games</Text>
+            <SubHeader>Games</SubHeader>
             <Text style={sectionText}>Starbucks, GV and Gong Cha vouchers to be won, first come first serve!</Text>
             <FeatureCardSection cardDetails={gameCardDetails}></FeatureCardSection>
-            <Text style={sectionHeaders}>View our ASD Projects</Text>
-            <CTA href="/asd2020" style={ASDBtnStyles}>ASD Projects</CTA>
+            {/* <Text style={sectionHeaders}>View our ASD Projects</Text>
+            <CTA href="/asd2020" style={ASDBtnStyles}>ASD Projects</CTA> */}
         </PageBase>
     )
 }
