@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import HeroImage from "./HeroImage";
+//import HeroImage from "./HeroImage";
 import Content from "./Content";
 
 const Main = styled.main`
@@ -36,7 +36,6 @@ const Main = styled.main`
 const MainComp = ({ blockCount, setBlockCount }) => {
   return (
     <Main>
-      <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} />
       <Content />
     </Main>
   );
