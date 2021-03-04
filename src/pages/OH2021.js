@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";

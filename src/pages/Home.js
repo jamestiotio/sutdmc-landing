@@ -1,30 +1,28 @@
-import React, {useState} from "react";
+import React from "react";
 import styled from "styled-components";
 
 import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";
 import PageBanner from "../components/PageBanner";
 // import SubHeader from "../components/SubHeader";
-import Text from "../components/Text";
 import CTA from "../components/CTA";
-import CTAbtn from '../components/CTAbtn';
 
-const BtnGroup = styled.div`
-  display: flex;
+// const BtnGroup = styled.div`
+//   display: flex;
 
-  & > * {
-    margin-right: 10px;
-    margin-top: 0;
-  }
+//   & > * {
+//     margin-right: 10px;
+//     margin-top: 0;
+//   }
 
-  @media (max-width: 600px) {
-    flex-direction: column;
+//   @media (max-width: 600px) {
+//     flex-direction: column;
 
-    & > * {
-      margin-top: 10px;
-    }
-  }
-`;
+//     & > * {
+//       margin-top: 10px;
+//     }
+//   }
+// `;
 
 // const HomeComp = () => {
 //   const [userType, setUserType] = useState('minecraft');

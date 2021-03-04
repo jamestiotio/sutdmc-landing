@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Link from "./components/Link";
 import menu from './assets/images/menu.png';
-import HeroImage from "./HeroImage";
+//import HeroImage from "./HeroImage";
 
 const NavLink = styled(Link)``;
 
