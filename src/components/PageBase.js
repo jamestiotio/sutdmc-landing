@@ -14,10 +14,6 @@ const PageBase = styled.section`
   & > * + a {
     margin-top: 30px;
   }
-
-  & > * > * + * {
-    margin-top: 10px;
-  }
 `;
 
 const PageBaseComp = React.forwardRef(({ children, ...others }, ref) => {

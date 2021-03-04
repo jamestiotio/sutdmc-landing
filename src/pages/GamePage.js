@@ -9,9 +9,17 @@ import Text from '../components/Text';
 const GamePhoto = styled.img`
     width: 70%;
     margin: 10px auto;
+
+    @media (max-width: 896px) {
+        width: 100%;
+    }
 `;
 
 const GamePageContent = styled.div`
+    & img {
+        display: block;
+    }
+
     font-family: var(--font-primary);
     font-size: 24px;
     line-height: 1.4;
@@ -32,7 +40,7 @@ const GamePageContent = styled.div`
 `;
 
 const GamePageList = styled.ul`
-    
+
 `;
 
 const GamePageTable = styled.table`
@@ -53,20 +61,24 @@ const gamePageSectionHeader = {
     textTransform: 'uppercase',
     fontSize: '30px',
     color: 'var(--color-accent)',
-    marginTop: '10px'
+    marginTop: '20px'
 }
 
 const ArticleRow = styled.div`
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 20px;
 
     & > * {
-        width: 50%;
         margin: 0 16px;
     }
 
-    @media (max-width: 1008px) {
+    @media (max-width: 968px) {
+        & > * {
+            margin: 0;
+        }
+
+        display : flex;
         flex-direction: column;
 
         &:nth-child(even) {
@@ -76,15 +88,13 @@ const ArticleRow = styled.div`
 `;
 
 const ArticleImageDiv = styled.div`
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    align-self: center;
 `;
 
 const ArticleImage = styled.img`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.5);
+    height: auto;
+    width: 100%;
 `;
 
 const treasureHuntMarkup = (
@@ -176,7 +186,7 @@ const speedBakersMarkup = (
                 <ArticleImage src={require('../assets/images/oh2021-games/speedbakers_4.png')}></ArticleImage>
             </ArticleImageDiv>
         </ArticleRow>
-        
+
 
         <Text style={gamePageSectionHeader}>Gameplay</Text>
 
@@ -258,7 +268,7 @@ const GamePageComp = () => {
             <GamePhoto src={game.mainPhoto}></GamePhoto>
             {game.content}
         </PageBase>
-        
+
     );
 }
 

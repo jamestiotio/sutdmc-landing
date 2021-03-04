@@ -47,7 +47,8 @@ const bannerText = (
     </>
 )
 const sectionText = {
-    'text-align': 'center'
+    'text-align': 'center',
+    'margin-top': '0px'
 }
 
 const OH2021Comp = () => {
