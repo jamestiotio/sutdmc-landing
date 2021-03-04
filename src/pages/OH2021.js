@@ -19,13 +19,13 @@ const gameCardDetails = {
         title: 'Redstone Rush',
         href: '/oh2021/redstone_rush',
         imgSource: require('../assets/images/oh2021-games/redstone_rush.png'),
-        description: 'Test your Boolean logic as fast as possible in our ISTD inspired game and complete the gauntlet!' 
+        description: 'Test your Boolean logic as fast as possible in our ISTD inspired game and complete the gauntlet!'
     },
     gallery: {
         title: 'Speed Bakers',
         href: '/oh2021/speed_bakers',
         imgSource: require('../assets/images/oh2021-games/speed_bakers.png'),
-        description: 'Optimise your very own cake supply chain in our ESD inspired game!' 
+        description: 'Optimise your very own cake supply chain in our ESD inspired game!'
     }
 };
 
@@ -46,6 +46,9 @@ const bannerText = (
         <h3>Join us in game or tune in to our livestream on 6th of March!</h3>
     </>
 )
+const sectionText = {
+    'text-align': 'center'
+}
 
 const OH2021Comp = () => {
     return (
@@ -55,7 +58,7 @@ const OH2021Comp = () => {
                 {bannerText}
             </PageBanner>
             <Text style={sectionHeaders}>Games</Text>
-            <Text style={sectionHeaders}>Starbuck, GV and Gong Cha vouchers to be won, first come first serve!</Text>
+            <Text style={sectionText}>Starbucks, GV and Gong Cha vouchers to be won, first come first serve!</Text>
             <FeatureCardSection cardDetails={gameCardDetails}></FeatureCardSection>
             <Text style={sectionHeaders}>View our ASD Projects</Text>
             <CTA href="/asd2020" style={ASDBtnStyles}>ASD Projects</CTA>

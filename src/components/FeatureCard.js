@@ -29,13 +29,17 @@ const FeatureCard = styled.div`
 
 const FeatureCardImage = styled.img`
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(.3);
+    transform: translate(-50%, -50%);
 `;
 
 const FeatureCardTitle = styled.p`
     text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
     position: absolute;
     bottom: 5px;
     left: 50%;
