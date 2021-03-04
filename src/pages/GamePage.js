@@ -114,7 +114,6 @@ const treasureHuntMarkup = (
             <li>There will be 5 treasures hidden in different places of the school each day from 5 to 8 March 2021, for a total of 20 prizes.</li>
             <li>Prizes can only be redeemed by people <strong>currently residing</strong> in Singapore.</li>
             <li>Each player can only take one (1) prize book out of treasure chests (to redeem for themselves). <strong>Players who keep more than one prize book in their inventories will be disqualified.</strong></li>
-            <li>Players who keep more than one prize book in their inventories will be disqualified.</li>
         </GamePageList>
 
         <Text style={gamePageSectionHeader}>Treasure Status</Text>
@@ -122,7 +121,7 @@ const treasureHuntMarkup = (
         <GamePageTable>
             <GamePageTableRow>
                 <GamePageTableCell>Friday</GamePageTableCell>
-                <GamePageTableCell>Not Yet Placed</GamePageTableCell>
+                <GamePageTableCell>5/5 remaining!</GamePageTableCell>
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Saturday</GamePageTableCell>
@@ -228,10 +227,12 @@ const speedBakersMarkup = (
 
         <Text style={gamePageSectionHeader}>Rules</Text>
         <GamePageList>
-            <li>The game is open from Friday, 5 March, 9am to Monday, 8 March 5pm. At the end of the event, the top 5 scorers will be contacted to receive a prize.</li>
-            <li>If you would like to be considered for a prize, you must register your contact details<a style={{textDecoration: 'underline', margin: '0 10px'}} href={'https://forms.office.com/Pages/ResponsePage.aspx?id=drd2NJDpck-5UGJImDFiPXTTmLO9afxItEje2XCt5nVUOEtKV0JHNDdHTzE2MUtYV0RPR1oxVU9QNyQlQCN0PWcu'}>in this form</a><em>before</em> the end of the event.</li>
-            <li>Only people <strong>currently residing</strong> in Singapore are eligible to claim the prize. If you are not residing in Singapore at the moment, you can still play the game.</li>
-            <li>SUTD reserves the right to change the prize subject to availability.</li>
+            <ul>
+                <li>The game is open from Saturday, 6 March, 9am to Monday, 8 March 5pm. At the end of the event, the top 5 scorers will be contacted to receive a prize.</li>
+                <li>If you would like to be considered for a prize, you must register your contact details<a style={{textDecoration: 'underline', margin: '0 10px'}} href={'https://forms.office.com/Pages/ResponsePage.aspx?id=drd2NJDpck-5UGJImDFiPXTTmLO9afxItEje2XCt5nVUOEtKV0JHNDdHTzE2MUtYV0RPR1oxVU9QNyQlQCN0PWcu'}>in this form</a><em>before</em> the end of the event.</li>
+                <li>Only people <strong>currently residing</strong> in Singapore are eligible to claim the prize. If you are not residing in Singapore at the moment, you can still play the game.</li>
+                <li>SUTD reserves the right to change the prize subject to availability.</li>
+            </ul>
         </GamePageList>
     </GamePageContent>
 )
