@@ -8,6 +8,7 @@ import Elsewhere from "./pages/Elsewhere";
 import Error from "./pages/Error";
 import ASDProjects from './pages/ASDProjects';
 import ASDProjectPage from './pages/ASDProjectPage';
+import GamePage from './pages/GamePage';
 import OH2021 from './pages/OH2021';
 
 const Content = styled.div`
@@ -43,6 +44,9 @@ const ContentComp = () => {
         </Route>
         <Route exact path="/oh2021">
           <OH2021 />
+        </Route>
+        <Route exact path="/oh2021/:id">
+          <GamePage />
         </Route>
         <Route exact path="/asd2020">
           <ASDProjects />
