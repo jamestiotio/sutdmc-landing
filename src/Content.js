@@ -10,7 +10,11 @@ import ASDProjects from './pages/ASDProjects';
 import ASDProjectPage from './pages/ASDProjectPage';
 import GamePage from './pages/GamePage';
 import OH2021 from './pages/OH2021';
+
 import ComingSoon from './pages/ComingSoon';
+
+import Campus from "./pages/Campus";
+
 
 const Content = styled.div`
   max-height: 100%;
@@ -59,6 +63,9 @@ const ContentComp = () => {
         <Route exact path="/asd2020/:id">
           {/* <ASDProjectPage /> */}
           <ComingSoon/>
+        </Route>
+        <Route exact path="/campus">
+          <Campus/>
         </Route>
         <Route path="*">
           <Error />

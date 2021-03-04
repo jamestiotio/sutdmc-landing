@@ -12,7 +12,7 @@ const CTAbtn = styled.button`
   border-top: 6px inset rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
   color: var(--color-grey);
-  display: block;
+  display: inline-block;
   font-family: var(--font-primary);
   font-size: 24px;
   min-width: 200px;
