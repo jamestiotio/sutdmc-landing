@@ -2,18 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { Switch, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Elsewhere from "./pages/Elsewhere";
+// import Home from "./pages/Home";
+// import About from "./pages/About";
+// import Elsewhere from "./pages/Elsewhere";
 import Error from "./pages/Error";
-import ASDProjects from './pages/ASDProjects';
-import ASDProjectPage from './pages/ASDProjectPage';
+// import ASDProjects from './pages/ASDProjects';
+// import ASDProjectPage from './pages/ASDProjectPage';
 import GamePage from './pages/GamePage';
 import OH2021 from './pages/OH2021';
 
 import ComingSoon from './pages/ComingSoon';
 
-import Campus from "./pages/Campus";
+//import Campus from "./pages/Campus";
 
 
 const Content = styled.div`

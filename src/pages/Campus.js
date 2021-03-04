@@ -1,5 +1,5 @@
 import React, {useState,useLayoutEffect}  from "react";
-import ReactCompareImage from "react-compare-image";
+//import ReactCompareImage from "react-compare-image";
 import PageHeader from "../components/PageHeader";
 import PageBanner from "../components/PageBanner";
 import PageBase from "../components/PageBase";
