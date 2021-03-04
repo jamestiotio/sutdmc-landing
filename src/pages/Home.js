@@ -68,7 +68,7 @@ const BtnGroup = styled.div`
 //       </> :
 //       <Text>Non minecraft player</Text>
 //       }
-      
+
 //     </PageBase>
 //   );
 // };

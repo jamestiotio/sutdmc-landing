@@ -19,13 +19,13 @@ const gameCardDetails = {
         title: 'Redstone Gauntlet',
         href: '/',
         imgSource: '',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?' 
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?'
     },
     gallery: {
         title: 'ESD Game',
         href: '/',
         imgSource: '',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?' 
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?'
     }
 };
 
@@ -35,7 +35,7 @@ const ASDBtnStyles = {
 };
 
 const sectionHeaders = {
-    'margin': '30px auto',
+    'margin': '40px auto 20px auto',
 }
 
 const OH2021Comp = () => {
