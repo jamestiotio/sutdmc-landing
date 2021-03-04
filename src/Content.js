@@ -67,6 +67,9 @@ const ContentComp = () => {
         <Route exact path="/campus">
           <Campus/>
         </Route>
+        <Route exact path="/oh2020">
+          <ComingSoon/>
+        </Route>
         <Route path="*">
           <Error />
         </Route>
