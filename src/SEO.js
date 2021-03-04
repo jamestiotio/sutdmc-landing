@@ -51,12 +51,12 @@ const SEO = () => {
 
   const title = currentPage
       ? `${currentPage.charAt(0).toUpperCase() +
-          currentPage.slice(1)} | SUTDLAND - SUTD In Minecraft`
-      : "SUTDLAND - SUTD In Minecraft",
+          currentPage.slice(1)} | SUTD Minecraft`
+      : "SUTD Minecraft",
     description = `A blocky and virtual rendition of SUTD in a student-hosted Minecraft server!`,
     image =
       "https://sutdmc.opensutd.org" + require("./assets/images/site-logo.png"),
-    sitename = "SUTDLAND - SUTD In Minecraft",
+    sitename = "SUTD Minecraft",
     url = currentPage
       ? currentPage === "404"
         ? "https://sutdmc.opensutd.org/"

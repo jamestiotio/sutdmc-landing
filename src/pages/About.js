@@ -19,7 +19,7 @@ const AboutComp = () => {
   return (
     <PageBase>
       <PageHeader>About This Project</PageHeader>
-      <SubHeader>What is SUTDLAND?</SubHeader>
+      <SubHeader>What is the SUTD Minecraft Campus</SubHeader>
       <Text>
         It is a virtual recreation of the SUTD Campus in Minecraft. Come join
         our server and walk around our beautiful campus. Sneak a peek at our
@@ -29,7 +29,7 @@ const AboutComp = () => {
       </Text>
       <SubHeader>Our story</SubHeader>
       <Text>
-        SUTDLAND (SUTD in Minecraft) has its humble origins as a private
+        SUTD Minecraft has its humble origins as a private
         survival server for a small group of friends in the ISTD Pillar, running
         off a decomissioned laptop sitting on top of a fridge in a student's
         hostel room. When the call came to re-invent our Open House virtually,
