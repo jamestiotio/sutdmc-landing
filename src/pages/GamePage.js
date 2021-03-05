@@ -123,7 +123,7 @@ const treasureHuntMarkup = (
         <GamePageList>
             <li>Hint 1: There is something a-<strong>maze</strong>-ing in Building 2!</li>
             <li>Hint 2: The Jackie Chan Pavilions around the school might have their secrets!</li>
-        <GamePageList>
+        </GamePageList>
             
         <GamePageTable>
             <GamePageTableRow>
