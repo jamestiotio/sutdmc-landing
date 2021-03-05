@@ -132,7 +132,7 @@ const treasureHuntMarkup = (
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Saturday</GamePageTableCell>
-                <GamePageTableCell>Not Yet Placed</GamePageTableCell>
+                <GamePageTableCell>5/5 remaining!</GamePageTableCell>
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Sunday</GamePageTableCell>
