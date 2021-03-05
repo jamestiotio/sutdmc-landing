@@ -117,11 +117,18 @@ const treasureHuntMarkup = (
         </GamePageList>
 
         <Text style={gamePageSectionHeader}>Treasure Status</Text>
-        <Text>This table will be updated once treasures are found. Keep an eye on this page as we might post hints!</Text>
+        <Text>
+            This table will be updated once treasures are found. Keep an eye on this page as we might post hints!
+        </Text>
+        <GamePageList>
+            <li>Hint 1: There is something a-<strong>maze</strong>-ing in Building 2!</li>
+            <li>Hint 2: The Jackie Chan Pavilions around the school might have their secrets!</li>
+        </GamePageList>
+            
         <GamePageTable>
             <GamePageTableRow>
                 <GamePageTableCell>Friday</GamePageTableCell>
-                <GamePageTableCell>5/5 remaining!</GamePageTableCell>
+                <GamePageTableCell>3/5 remaining!</GamePageTableCell>
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Saturday</GamePageTableCell>
