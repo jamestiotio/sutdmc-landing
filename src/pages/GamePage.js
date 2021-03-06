@@ -123,20 +123,22 @@ const treasureHuntMarkup = (
         <GamePageList>
             <li>Hint 1: There is something a-<strong>maze</strong>-ing in Building 2!</li>
             <li>Hint 2: The Jackie Chan Pavilions around the school might have their secrets!</li>
+            <li>Hint 3: We have a lot of staircases around the campus, one of them might be hiding something...</li>
+            <li>Hint 4: Did you know that Upper Changi MRT is the closest to SUTD?</li>
         </GamePageList>
             
         <GamePageTable>
             <GamePageTableRow>
                 <GamePageTableCell>Friday</GamePageTableCell>
-                <GamePageTableCell>3/5 remaining!</GamePageTableCell>
+                <GamePageTableCell>2/5 remaining!</GamePageTableCell>
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Saturday</GamePageTableCell>
-                <GamePageTableCell>5/5 remaining!</GamePageTableCell>
+                <GamePageTableCell>4/5 remaining!</GamePageTableCell>
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Sunday</GamePageTableCell>
-                <GamePageTableCell>Not Yet Placed</GamePageTableCell>
+                <GamePageTableCell>5/5 remaining!</GamePageTableCell>
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Monday</GamePageTableCell>
