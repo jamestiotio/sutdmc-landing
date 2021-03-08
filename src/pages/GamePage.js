@@ -121,10 +121,12 @@ const treasureHuntMarkup = (
             This table will be updated once treasures are found. Keep an eye on this page as we might post hints!
         </Text>
         <GamePageList>
-            <li>Hint 1: There is something a-<strong>maze</strong>-ing in Building 2!</li>
-            <li>Hint 2: The Jackie Chan Pavilions around the school might have their secrets!</li>
-            <li>Hint 3: We have a lot of staircases around the campus, one of them might be hiding something...</li>
-            <li>Hint 4: Did you know that Upper Changi MRT is the closest to SUTD?</li>
+            <li>Hint 1: There is something a-<strong>maze</strong>-ing in Building 2!(Bigger Hint: Look around level 5)</li>
+            <li>Hint 2: The Jackie Chan Pavilions around the school might have their secrets! (Bigger Hint: 2 of them have a treasure)</li>
+            <li>Hint 3: We have a lot of staircases around the campus, one of them might be hiding something... (Bigger Hint: Look around the ground floor of Building 1)</li>
+            <li>Hint 4: Did you know that Upper Changi MRT is the closest train station to SUTD? (Bigger Hint: Check out both entrances in our campus build)</li>
+            <li>Hint 5: Check out our FabLab!</li>
+            <li>Hint 6: The Root Cove and Hostel Lounge are nice places to chill.</li>
         </GamePageList>
             
         <GamePageTable>
@@ -142,7 +144,7 @@ const treasureHuntMarkup = (
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Monday</GamePageTableCell>
-                <GamePageTableCell>Not Yet Placed</GamePageTableCell>
+                <GamePageTableCell>5/5 remaining!</GamePageTableCell>
             </GamePageTableRow>
         </GamePageTable>
     </GamePageContent>
