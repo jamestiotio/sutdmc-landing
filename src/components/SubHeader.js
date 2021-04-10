@@ -4,8 +4,15 @@ import styled from "styled-components";
 const SubHeader = styled.h2`
   font-family: var(--font-primary);
   font-size: 24px;
+  text-align: center;
+  margin: 40px auto 20px auto;
   color: var(--color-text);
   text-decoration: underline;
+
+  &::selection {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
 
   @media (max-width: 1200px) {
     font-size: 22px;
@@ -15,7 +22,7 @@ const SubHeader = styled.h2`
     font-size: 20px;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     font-size: 18px;
   }
 `;

@@ -4,16 +4,63 @@ import { useLocation } from "react-router-dom";
 
 const SEO = () => {
   const location = useLocation().pathname.slice(1);
+  let currentPage;
+  switch (location) {
+    case "":
+      currentPage = "";
+      break;
+    case "about":
+      currentPage = "about";
+      break;
+    case "about/":
+      currentPage = "about";
+      break;
+    case "elsewhere":
+      currentPage = "elsewhere";
+      break;
+    case "elsewhere/":
+      currentPage = "elsewhere";
+      break;
+    case "oh2021":
+      currentPage = "Open House 2021";
+      break;
+    case "oh2021/":
+      currentPage = "Open House 2021";
+      break;
+    case "oh2021/treasure_hunt":
+      currentPage = "Treasure Hunt";
+      break;
+    case "oh2021/treasure_hunt/":
+      currentPage = "Treasure Hunt";
+      break;
+    case "oh2021/redstone_rush":
+      currentPage = "Redstone Rush";
+      break;
+    case "oh2021/redstone_rush/":
+      currentPage = "Redstone Rush";
+      break;
+    case "oh2021/speed_bakers":
+      currentPage = "Speed Bakers";
+      break;
+    case "oh2021/speed_bakers/":
+      currentPage = "Speed Bakers";
+      break;
+    default:
+      currentPage = "404";
+  }
 
-  const title = location
-      ? `${location.charAt(0).toUpperCase() +
-          location.slice(1)} | SUTD Minecraft`
+  const title = currentPage
+      ? `${currentPage.charAt(0).toUpperCase() +
+          currentPage.slice(1)} | SUTD Minecraft`
       : "SUTD Minecraft",
-    description = `A blocky and virtual rendition of SUTD in our very own student-hosted Minecraft server!`,
-    image = require("./assets/images/site-image.png"),
+    description = `A blocky and virtual rendition of SUTD in a student-hosted Minecraft server!`,
+    image =
+      "https://sutdmc.opensutd.org" + require("./assets/images/site-logo.png"),
     sitename = "SUTD Minecraft",
-    url = location
-      ? `https://sutdmc.opensutd.org/${location}/`
+    url = currentPage
+      ? currentPage === "404"
+        ? "https://sutdmc.opensutd.org/"
+        : `https://sutdmc.opensutd.org/${currentPage}/`
       : "https://sutdmc.opensutd.org/",
     type = "website";
 

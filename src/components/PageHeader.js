@@ -6,6 +6,11 @@ const PageHeader = styled.h1`
   font-size: 50px;
   color: var(--color-accent);
 
+  &::selection {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
+
   @media (max-width: 1200px) {
     font-size: 42px;
   }
@@ -14,7 +19,7 @@ const PageHeader = styled.h1`
     font-size: 34px;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     font-size: 28px;
   }
 `;

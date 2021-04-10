@@ -7,14 +7,34 @@ const Text = styled.p`
   line-height: 1.4;
   color: var(--color-text);
 
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   & > span.colored {
     color: var(--color-accent);
+
+    &::selection {
+      background-color: var(--color-accent);
+      color: var(--color-text);
+    }
   }
 
   & > span.code {
     background-color: var(--color-grey);
     border-radius: 10px;
     padding: 5px 10px;
+
+    &::selection {
+      background-color: var(--color-accent);
+      color: var(--color-text);
+    }
+  }
+
+  &::selection {
+    background-color: var(--color-accent);
+    color: var(--color-background);
   }
 
   @media (max-width: 1200px) {
@@ -25,7 +45,7 @@ const Text = styled.p`
     font-size: 20px;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     font-size: 18px;
   }
 `;

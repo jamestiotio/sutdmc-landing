@@ -14,14 +14,14 @@ const PageBase = styled.section`
   & > * + a {
     margin-top: 30px;
   }
-
-  & > * > * + * {
-    margin-top: 10px;
-  }
 `;
 
-const PageBaseComp = ({ children, ...others }) => {
-  return <PageBase {...others}>{children}</PageBase>;
-};
+const PageBaseComp = React.forwardRef(({ children, ...others }, ref) => {
+  return (
+    <PageBase ref={ref} {...others}>
+      {children}
+    </PageBase>
+  );
+});
 
 export default PageBaseComp;

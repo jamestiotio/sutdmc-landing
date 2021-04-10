@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-import HeroImage from "./HeroImage";
+//import HeroImage from "./HeroImage";
 import Content from "./Content";
 
 const Main = styled.main`
   width: 100vw;
-  max-width: 1680px;
-  height: calc(100% - 60px);
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 10%;
 
   @media (max-width: 1200px) {
@@ -20,21 +21,24 @@ const Main = styled.main`
 
   @media (max-width: 896px) {
     padding: 20px 15%;
+    height: auto;
     flex-direction: column;
+    margin-top: 0px;
+    min-height: calc(100vh - 60px);
+    justify-content: space-evenly;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 576px) {
     padding: 0 20px;
   }
 `;
 
-const MainComp = () => {
+const MainComp = ({ blockCount, setBlockCount }) => {
   return (
     <Main>
-      <HeroImage />
       <Content />
     </Main>
   );
 };
 
-export default MainComp;
+export default React.memo(MainComp);
